@@ -1,0 +1,28 @@
+<svg width="640" height="400" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Adaptive change leadership</title>
+<desc id="desc">Interlocking abstract forms representing collaboration and change.</desc>
+<defs>
+  <linearGradient id="warm" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#ffb973"/>
+    <stop offset="100%" stop-color="#f87b9e"/>
+  </linearGradient>
+  <linearGradient id="cool" x1="0%" y1="100%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#8fd3f4"/>
+    <stop offset="100%" stop-color="#84fab0"/>
+  </linearGradient>
+</defs>
+<rect width="640" height="400" fill="#fffaf3"/>
+<g opacity="0.12">
+  <circle cx="180" cy="140" r="120" fill="#f87b9e"/>
+  <circle cx="420" cy="260" r="140" fill="#84fab0"/>
+</g>
+<path d="M120 240 C200 140 320 130 420 210" stroke="#182848" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.25"/>
+<path d="M150 200 C240 120 330 150 420 90" stroke="#f87b9e" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.6"/>
+<path d="M180 300 C260 220 360 260 440 200" stroke="url(#cool)" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.8"/>
+<rect x="240" y="120" width="210" height="150" rx="40" fill="url(#warm)" opacity="0.85"/>
+<rect x="190" y="180" width="210" height="150" rx="40" fill="url(#cool)" opacity="0.85"/>
+<text x="64" y="70" fill="#f59c6a" font-family="Inter, sans-serif" font-size="28" font-weight="700">Change leadership</text>
+<text x="64" y="102" fill="#f87b9e" font-family="Inter, sans-serif" font-size="16">resilience · coaching · clarity</text>
+<text x="64" y="320" fill="#1f2937" font-family="Inter, sans-serif" font-size="16" font-weight="600">"What should we adjust first?"</text>
+<text x="64" y="344" fill="#4b5563" font-family="Inter, sans-serif" font-size="13">Align stakeholders, pilot quickly, and narrate the wins.</text>
+</svg>

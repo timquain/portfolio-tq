@@ -134,6 +134,93 @@ h3 {
   margin: 24px 0 10px;
 }
 
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.lead {
+  font-size: 18px;
+  color: #3d405b;
+  margin-top: 8px;
+}
+
+.feature-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.feature-tiles .tile {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 22px rgba(20, 8, 29, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-tiles .tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(70, 130, 180, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(59, 60, 100, 0.14), transparent 28%);
+  opacity: 0.8;
+}
+
+.feature-tiles .tile h3 {margin: 0 0 6px; position: relative; z-index: 1;}
+.feature-tiles .tile p, .feature-tiles .tile ul {position: relative; z-index: 1;}
+
+.split-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: center;
+  padding: 0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.split-card .text-pane {padding: 26px; background: #fff;}
+
+.split-card .image-pane {
+  position: relative;
+  min-height: 240px;
+  background: linear-gradient(160deg, rgba(70, 130, 180, 0.12), rgba(59, 60, 100, 0.08));
+}
+
+.split-card .image-pane img {width: 100%; height: 100%; object-fit: cover; display: block;}
+
+.split-card .image-pane .tag {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+.inline-meta {display: flex; flex-wrap: wrap; gap: 12px; margin: 10px 0 18px;}
+.inline-meta .pill {background: var(--hover); color: var(--ink); border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px; font-weight: 600; font-size: 12px;}
+
+.checklist {list-style: none; padding: 0; margin: 12px 0;}
+.checklist li {display: flex; align-items: flex-start; gap: 10px; padding: 8px 0;}
+.checklist li::before {content: '✔'; color: var(--accent); font-weight: 700;}
+
+.gallery-row {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 16px;}
+.gallery-row figure {margin: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 6px 18px rgba(20, 8, 29, 0.06);}
+.gallery-row img {width: 100%; display: block;}
+.gallery-row figcaption {padding: 10px 12px; font-size: 13px; color: var(--muted);}
+
 .badge {
   display: inline-block;
   padding: 6px 10px;
@@ -342,53 +429,58 @@ footer {
 <main class="wrap">
 <section class="accent-section">
   <h2>Visual Snapshot</h2>
-  <p>Quick view of how each artifact connects AI, UX storytelling, and scientific rigor. Hover to explore the highlights, then dive into the detailed sections below.</p>
-  <div class="artifact-grid">
-    <div class="visual-card">
-      <h3>JayTees Fabric Assistant</h3>
-      <p class="pill-muted">AI e‑commerce concierge for fabric discovery.</p>
-      <ul>
-        <li>Conversational flows tuned for clarity and safety.</li>
-        <li>FastAPI + OpenAI prototype with test harness.</li>
-        <li>Customer-ready FAQ, policies, and yardage logic.</li>
-      </ul>
-    </div>
-    <div class="visual-card">
-      <h3>Adaptability &amp; Change</h3>
-      <p class="pill-muted">Leadership narrative grounded in lived experience.</p>
-      <ul>
-        <li>Storytelling aligned to audience needs.</li>
-        <li>Embedded PDF for rapid reference.</li>
-        <li>Focus on resilient mindsets and collaboration.</li>
-      </ul>
-    </div>
-    <div class="visual-card">
-      <h3>Molecules → Machine Learning</h3>
-      <p class="pill-muted">Interdisciplinary bridge from chemistry to AI.</p>
-      <ul>
-        <li>Highlights neural nets in computational chemistry.</li>
-        <li>Communicates complex ideas with approachable language.</li>
-        <li>Emphasizes adaptation and clear stakeholder updates.</li>
-      </ul>
-    </div>
-    <div class="visual-card">
-      <h3>Deep Learning &amp; Materials</h3>
-      <p class="pill-muted">Neural networks for discovery and R&amp;D analytics.</p>
-      <ul>
-        <li>Applications: MOFs, adsorption, semiconductor analytics.</li>
-        <li>Graph neural nets + domain-driven validation.</li>
-        <li>Positions AI as a force multiplier for lab insights.</li>
-      </ul>
-    </div>
+  <p class="lead">Quick view of how each artifact connects AI, UX storytelling, and scientific rigor. Skim the gallery, then dive into the detailed sections below.</p>
+  <div class="gallery-row">
+    <figure>
+      <img src="assets/ai-commerce-abstract.svg" alt="AI concierge abstract art with gradients"/>
+      <figcaption>JayTees Fabric Assistant — commerce concierge with safety rails and tone control.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/ai-change-leadership.svg" alt="Interlocking shapes representing change leadership"/>
+      <figcaption>Adaptive change narrative — resilience, coaching, and communication.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/ai-research-bridge.svg" alt="Bridge between molecules and neural nodes"/>
+      <figcaption>Molecules → Machine Learning — translating research between domains.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/ai-materials-grid.svg" alt="Neural grid for materials discovery"/>
+      <figcaption>Deep Learning &amp; Materials — graph neural nets for scientific discovery.</figcaption>
+    </figure>
   </div>
-  <div class="card outline">
-    <h3>Journey at a Glance</h3>
-    <ul class="timeline">
-      <li><strong>Empathize &amp; Define:</strong> map user intents and learning goals.</li>
-      <li><strong>Prototype &amp; Test:</strong> build conversational flows, run smoke + scenario tests.</li>
-      <li><strong>Communicate &amp; Adapt:</strong> translate research into visuals and accessible language.</li>
-      <li><strong>Scale &amp; Integrate:</strong> connect AI models to real data and stakeholder needs.</li>
-    </ul>
+  <div class="feature-tiles">
+    <div class="tile">
+      <h3>Hero Flow</h3>
+      <p>Conversational guardrails, clarifying questions, and microcopy tuned for shoppers.</p>
+      <ul class="pill-muted">
+        <li>Scenario tests for refunds, shipping, and fabric care.</li>
+        <li>Product cards + routing rules for better recommendations.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <h3>Audience Fit</h3>
+      <p>Leaders, assessors, and founders see tailored narratives and embedded proof.</p>
+      <ul class="pill-muted">
+        <li>PDF reference inside the page.</li>
+        <li>Contextual badges for scope, role, and stack.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <h3>AI + Research</h3>
+      <p>Domain bridges from chemistry to neural nets with clear validation checkpoints.</p>
+      <ul class="pill-muted">
+        <li>Rigor: datasets, metrics, safety stance.</li>
+        <li>Value: faster iteration and informed decisioning.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <h3>Journey</h3>
+      <p>From empathizing with users to scaling prototypes into repeatable runbooks.</p>
+      <ul class="pill-muted">
+        <li>Empathize → Prototype → Test → Integrate.</li>
+        <li>Each artifact tagged with role, stack, and outcome.</li>
+      </ul>
+    </div>
   </div>
 </section>
 <section id="bio">
@@ -423,178 +515,130 @@ footer {
 </div>
 </section>
 <section id="artifact1">
-<div class="card">
-<h2>Artifact Information: JayTees Fabric Assistant (AI E‑commerce Chatbot)</h2>
-<h3>Artifact Title</h3>
-<p>JayTees Fabric Assistant — AI‑Powered E‑Commerce Chatbot</p>
-<h3>Introduction</h3>
-<p>This artifact is a working prototype of an AI shopping assistant for a boutique fabric business. It helps customers discover fabrics, estimate yardage, read care instructions, and understand policies through natural conversation. The prototype was developed during an AI Lab exercise.</p>
-<h3>Artifact Description</h3>
-<p><strong>Objective:</strong> Design and implement a helpful, safe, and testable AI assistant that improves customer decision‑making and reduces repetitive support.</p>
-<p><strong>Process:</strong> Empathize with users → Define the problem → Ideate intents and flows → Prototype (FastAPI + OpenAI) → Test (smoke, scenarios, unit tests) → Iterate (prompt tuning, cross‑sell rules, retrieval quality).</p>
-<p><strong>Was it a group or individually created product?</strong> Individually created; collaboration‑ready architecture with clear runbook and testing utilities.</p>
-<p><strong>Tools and Technologies Used:</strong> Python, FastAPI, Uvicorn, OpenAI API, YAML scenario tests, unittest, JSON product catalog, HTML/JS chat UI, runtime config and feedback logging.</p>
-<h3>Artifact‑Specific Value Proposition</h3>
-<p><strong>Unique Value:</strong> Demonstrates end‑to‑end product thinking: user empathy, conversational design, safety guardrails, measurable testing, and deploy‑ready backend.</p>
-<p><strong>Relevance:</strong> Aligned to my personal value proposition by showcasing both UX clarity and technical execution; relevant to audiences evaluating practical AI skills for real‑world applications.</p>
-<h3>Customization for Audience</h3>
-<p><strong>Adaptations Made:</strong> Branded as “JayTees Fabric Assistant,” added concise tone and clarifying questions, product cards, and optional visual UI. Provided a verification runbook and a portfolio page for academic or hiring review.</p>
-<p><strong>Relevance:</strong> Customizations ensure the artifact is accessible to non‑technical reviewers while retaining technical depth for developers.</p>
-<h3>Reflection</h3>
-<p><strong>Significance:</strong> I chose this artifact because it represents the fusion of AI capability with human‑centered design. It demonstrates practical skill across prompts, back‑end services, and evaluation tooling.</p>
-<p><strong>Lessons Learned:</strong> I learned how to structure AI prompts around user intents, tune response behavior with runtime config, and validate outcomes with automated tests. I also reinforced the importance of guardrails, concise UX copy, and iterative refinement.</p>
-<h3>Feedback and Revisions</h3>
-<p><strong>Feedback:</strong> Early feedback emphasized clarity of instructions and a desire for a visual demo. I incorporated a runbook, smoke tests, and a branded UI concept with persistent history.</p>
-<p><strong>Revisions:</strong> Improved onboarding (README and runbook), better error handling in test scripts, added <span class="mono">/config</span> and <span class="mono">/feedback</span> endpoints, and refined prompts for specific intents (yardage, care, policies).</p>
-<h3>References</h3>
-<p>FastAPI documentation; OpenAI API reference; internal runbook and testing scripts developed during the AI Lab.</p>
+<div class="card split-card">
+  <div class="text-pane">
+    <div class="eyebrow">Artifact 1 • Prototype</div>
+    <h2>JayTees Fabric Assistant</h2>
+    <p class="lead">An AI concierge that helps shoppers find fabrics, estimate yardage, and understand policies—built with clarity, safety, and testability in mind.</p>
+    <div class="inline-meta">
+      <span class="pill">Role: Solo build</span>
+      <span class="pill">Stack: FastAPI · OpenAI · YAML tests</span>
+      <span class="pill">Focus: Trustworthy UX</span>
+    </div>
+    <ul class="checklist">
+      <li><strong>Objective:</strong> ship a safe, reliable assistant that reduces repetitive support and speeds up purchase decisions.</li>
+      <li><strong>Process:</strong> Empathize → map intents → prototype (FastAPI + OpenAI) → smoke + scenario tests → tune prompts and cross‑sell logic.</li>
+      <li><strong>Audience fit:</strong> concise copy, clarifying questions, and a verification runbook for reviewers and collaborators.</li>
+    </ul>
+    <h3>Highlights</h3>
+    <ul class="checklist">
+      <li>Scenario and unit tests cover refunds, shipping, care, and safety guardrails.</li>
+      <li>Product catalog + routing rules produce grounded recommendations and FAQs.</li>
+      <li>Config + feedback endpoints make the prototype easy to tune in the wild.</li>
+    </ul>
+    <h3>Reflections</h3>
+    <p><strong>Significance:</strong> This work fuses human‑centered UX with backend rigor—every answer is concise, auditable, and designed for safe extensibility.</p>
+    <p><strong>Revisions:</strong> Added branded UI concepts, runbook steps, and clearer error handling based on early reviewer feedback.</p>
+  </div>
+  <div class="image-pane">
+    <img src="assets/ai-commerce-abstract.svg" alt="Gradient illustration representing AI commerce"/>
+    <span class="tag">AI + Commerce</span>
+  </div>
 </div>
 </section>
 <!-- Templates for Artifacts 2–5 -->
 <section id="artifact2">
-<div class="card">
-<h2>Artifact Information: Adaptability &amp; Change Leadership</h2>
-<div style="margin:20px 0;text-align:center">
-<iframe src="assets/2.4_Discussion_Adaptability_and_Change_Leadership_Group_3_compressed.pdf" style="width:100%;height:600px;border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08)">
-</iframe>
+<div class="card split-card">
+  <div class="text-pane">
+    <div class="eyebrow">Artifact 2 • Reflection</div>
+    <h2>Adaptability &amp; Change Leadership</h2>
+    <p class="lead">A group narrative on how adaptive learning and coaching unlock resilient responses to change.</p>
+    <div class="inline-meta">
+      <span class="pill">Collaboration</span>
+      <span class="pill">Tools: Canva · OpenAI research</span>
+      <span class="pill">Format: Embedded PDF</span>
+    </div>
+    <ul class="checklist">
+      <li><strong>Objective:</strong> illustrate how adaptive learning improves outcomes across personal and professional shifts.</li>
+      <li><strong>Process:</strong> peer interviews → story synthesis → visuals → facilitation prompts for discussion.</li>
+      <li><strong>Audience fit:</strong> plain language, concrete examples, and prompts that invite readers to map lessons to their own context.</li>
+    </ul>
+    <h3>Reflections</h3>
+    <p><strong>Significance:</strong> Adaptive leadership is a practice—this piece shows how reframing challenges can turn uncertainty into momentum.</p>
+    <p><strong>Revisions:</strong> Added clearer examples and tighter visuals based on early feedback; embedded the PDF for instant access.</p>
+    <p><a href="assets/2.4_Discussion_Adaptability_and_Change_Leadership_Group_3_compressed.pdf" target="_blank">Open the PDF in a new tab</a> or browse it inline.</p>
+  </div>
+  <div class="image-pane">
+    <img src="assets/ai-change-leadership.svg" alt="Colorful abstract shapes representing change leadership"/>
+    <span class="tag">Adaptive Teams</span>
+  </div>
 </div>
-<h3>Artifact Title</h3>
-<p>Adaptive Learning Interview Exchange</p>
-<h3>Introduction</h3>
-<p>This exercise presents a real-life, first-person perspective in which students share experiences from different areas of life, whether professional or personal, to show how adaptive learning helped them overcome specific challenges.</p>
-<h3>Artifact Description</h3>
-<p><strong>Objective:</strong> To highlight the importance of adaptive learning and how it improves the outcome of a change initiative.
- </p>
-<p><strong>Process:</strong> </p>
-<p><strong>Was it a group or individually created product?</strong> This was a group work with the names of group members on the first page of the pdf document</p>
-<p><strong>Tools and Technologies Used:</strong> We utilized canva for the powerpoint presentation and Open AI for our research</p>
-<h3>Artifact‑Specific Value Proposition</h3>
-<p><strong>Unique Value:</strong>A unique value I bring is my adaptability and change-driven leadership, shaped by personal experiences that have taught me how to adjust quickly, lead through uncertainty, and turn challenges into opportunities for growth.</p>
-<p><strong>Relevance:</strong> The relevance is that adaptability and change leadership are essential qualities that allow individuals to remain effective in a constantly changing world, and your personal examples make that value credible and authentic. </p>
-<h3>Customization for Audience</h3>
-<p><strong>Adaptations Made:</strong> The customization ensured that the message was not just delivered, but understood, connected with, and applied by the intended audience. </p>
-<p><strong>Relevance:</strong> The relevance lies in making the learning experience meaningful, not generic. By adapting the content, the communication becomes clearer, more engaging, and more impactful, which increases comprehension and retention </p>
-<h3>Reflection</h3>
-<p><strong>Significance:</strong> The significance is that adaptability and change leadership empower individuals to stay relevant, resilient, and effective in an environment where constant change is inevitable. </p>
-<p><strong>Lessons Learned:</strong> The key lesson is that adaptability and change leadership are not skills we are born with; they are developed through real experiences, and they prepare us not just to face the future, but to shape it. </p>
-<h3>Feedback and Revisions</h3>
-<p><strong>Feedback:</strong> The structured reflections clearly demonstrated good awareness of how personal experiences connect to broader learning concepts such as adaptability, change leadership, and audience-centered communication. This is a strong approach because it does not just state ideas, it shows the reasoning behind them. The addition of one or two brief, concrete examples (from real situations) to illustrate our points, which were real examples, deepened credibility and made the insights feel more grounded. </p>
-<p><strong>Revisions:</strong> A well-documented PDF file has been embedded for future or immediate reference. </p>
-<h3>References</h3>
-<p> OpenAI. (2025, November 8). Story generated by ChatGPT about personal adaptive learning journey. https://chat.openai.com/</p>
+<div class="card">
+  <iframe src="assets/2.4_Discussion_Adaptability_and_Change_Leadership_Group_3_compressed.pdf" style="width:100%;height:420px;border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08)"></iframe>
 </div>
 </section>
 <section id="artifact3">
-<div class="card">
-<h2>Artifact Information: Research, Adaptation, and Communication</h2>
-<h3>Artifact Title</h3><p>From Molecules to Machine Learning: An Integrated Approach to Research, Adaptation, and Communication</p>
-<h3>Introduction</h3><p>This artifact demonstrates how I combine my computational chemistry expertise with deep learning, neural  networks, adaptive learning strategies, and effective communication skills. It provides a clear example  of how scientific inquiry, machine learning, and leadership adaptability can be integrated into a cohesive  professional practice.</p>
-<h3>Artifact Description</h3>
-<p><strong>Objective:</strong> The objective of this artifact is to show how I merge scientific research, deep learning concepts, and  adaptive thinking into a unified process that supports problem solving and effective communication. It highlights my ability to translate complex ideas into accessible and meaningful insights.</p>
-<p><strong>Process:</strong> To create this artifact, I organized my research background, identified points where neural networks  support computational chemistry, interpreted how adaptive learning influences leadership behavior, and applied communication strategies that improve clarity. I combined these elements into a structured  presentation that reflects my interdisciplinary skill set.</p>
-<p><strong>Was it a group or individually created product?</strong> This artifact was created individually.</p>
-<p><strong>Tools and Technologies Used:</strong> Python, Quantum ESPRESSO, Gaussian, SIESTA, neural network frameworks, NumPy, pandas, and communication  techniques such as chunking, analogy, scaffolding, and structured messaging.</p>
-<h3>Artifact‑Specific Value Proposition</h3>
-<p><strong>Unique Value:</strong> This artifact showcases my ability to bridge computational chemistry, machine learning, adaptive leadership,  and communication. It demonstrates the rare combination of scientific depth, technical automation, human-centered communication, and reflective adaptability.</p>
-<p><strong>Relevance:</strong> The artifact aligns with my personal value proposition by demonstrating interdisciplinary strength, analytical  thinking, and the capacity to convey complex scientific and technical concepts to diverse audiences. This directly benefits employers, academic departments, and collaborative research environments.</p>
-<h3>Customization for Audience</h3>
-<p><strong>Adaptations Made:</strong> The explanations were simplified to be accessible to readers who may not have a chemistry or machine learning background. The structure was organized using clear headings and concise language to support  professional reviewers, instructors, employers, and academic evaluators.</p>
-<p><strong>Relevance:</strong> These customizations ensure the artifact is understandable, relevant, and meaningful for multiple audiences, including hiring managers, academic committees, and collaborators who value clarity and interdisciplinary  thinking.</p>
-<h3>Reflection</h3>
-<p><strong>Significance:</strong> I chose this artifact because it reflects who I am as a scientist, educator, and lifelong learner. It shows how I integrate computational research with modern data-driven tools and leadership principles. It also demonstrates my commitment to clearly and effectively communicating complex concepts.</p>
-<p><strong>Lessons Learned:</strong> Through this process, I strengthened my ability to simplify highly technical concepts and connect scientific  ideas with adaptive learning principles. I learned how neural networks complement computational chemistry  and how communication strategies improve audience engagement and understanding.</p>
-<h3>Feedback and Revisions</h3>
-<p><strong>Feedback:</strong> Feedback on earlier drafts encouraged me to simplify the technical explanations, improve transitions between sections, and make the artifact more accessible to non-technical readers.</p>
-<p><strong>Revisions:</strong> I revised the artifact by reorganizing the structure, adding clearer explanations of how deep learning supports scientific analysis, enhancing readability, and refining the communication approach to support  a broader audience.</p>
-<h3>References</h3><p>Quantum ESPRESSO Documentation; MIT Sloan EdTech resources on adaptive learning; introductory neural network learning materials; ChatGPT assistance (OpenAI, 2025)</p>
+<div class="card split-card">
+  <div class="text-pane">
+    <div class="eyebrow">Artifact 3 • Research Story</div>
+    <h2>From Molecules to Machine Learning</h2>
+    <p class="lead">An interdisciplinary walkthrough that pairs computational chemistry instincts with neural networks and adaptive communication.</p>
+    <div class="inline-meta">
+      <span class="pill">Role: Solo author</span>
+      <span class="pill">Stack: Python · Quantum ESPRESSO · NumPy</span>
+      <span class="pill">Focus: Translation between domains</span>
+    </div>
+    <ul class="checklist">
+      <li><strong>Objective:</strong> show how ML concepts plug into molecular modeling and how to explain that bridge to mixed audiences.</li>
+      <li><strong>Process:</strong> mapped research background → identified neural network touchpoints → rewrote for clarity using chunking, analogy, and scaffolding.</li>
+      <li><strong>Audience fit:</strong> non-specialists get approachable narratives; scientists get concrete tooling and validation hooks.</li>
+    </ul>
+    <h3>Highlights</h3>
+    <ul class="checklist">
+      <li>Use cases: adsorption prediction, STM conductance patterns, materials screening.</li>
+      <li>Communications toolkit: structured messaging, analogy-led explanations, and visuals.</li>
+      <li>Outcome: a reusable template for presenting interdisciplinary research with AI assist.</li>
+    </ul>
+    <h3>Reflections</h3>
+    <p><strong>Significance:</strong> Codifies how I translate lab insights into ML-ready problems while keeping rigor intact.</p>
+    <p><strong>Lessons:</strong> Simplifying dense topics builds trust and accelerates collaboration across teams.</p>
+  </div>
+  <div class="image-pane">
+    <img src="assets/ai-research-bridge.svg" alt="Bridge between molecular structures and neural networks"/>
+    <span class="tag">Chemistry × AI</span>
+  </div>
 </div>
 </section>
 <section id="artifact4">
-<div class="card">
-<h2>Artifact Information:Deep Learning and Neural Networks</h2>
-<h3>Artifact Title</h3>
-<p>Deep Learning and Neural Networks for Chemistry, Materials Science and AI Driven Discovery</p>
-<h3>Introduction</h3>
-<p>
-This artifact presents how deep learning and neural networks can strengthen research in chemistry and materials science. 
-Drawing from my background in physical and computational chemistry and my MS training in artificial intelligence 
-(data analytics specialty), this artifact shows how neural networks can accelerate molecular modeling, 
-predict material properties, analyze experimental data, and enhance data driven scientific discovery for R &amp; D 
-and semiconductor related applications.
-</p>
-<h3>Artifact Description</h3>
-<p><strong>Objective:</strong> 
-To demonstrate how neural networks and deep learning can be applied within chemistry, materials science, 
-and AI driven modeling to improve prediction accuracy, accelerate simulations, and uncover complex structure–property 
-relationships that traditional computational methods struggle to capture.
-</p>
-<p><strong>Process:</strong> 
-I consolidated my experience in computational chemistry, including DFT, adsorption modeling, MOF research, 
-and single molecule junction studies, with advanced concepts from deep learning such as feedforward networks, 
-convolutional architectures, and graph neural networks. I mapped real use cases to my field, including 
-prediction of gas adsorption in porous materials, approximation of DFT level properties, time series analysis 
-for STM based conductance data, and semiconductor relevant materials screening. 
-I synthesized domain knowledge, AI principles, and insights from coursework into a structured, portfolio ready artifact.
-</p>
-<p><strong>Was it a group or individually created product?</strong> 
-This artifact is an individually created product.
-</p>
-<p><strong>Tools and Technologies Used:</strong> 
-Python, TensorFlow, PyTorch, Scikit learn, Jupyter Notebook, Materials Project data, 
-DFT outputs from SIESTA and Quantum ESPRESSO, molecular descriptors, graph based modeling techniques, 
-and data analytics concepts.
-</p>
-<h3>Artifact-Specific Value Proposition</h3>
-<p><strong>Unique Value:</strong> 
-This artifact demonstrates my interdisciplinary ability to merge physical chemistry, materials science, 
-and artificial intelligence. It shows how deep learning can serve as a surrogate for expensive simulations, 
-accelerate discovery pipelines, and enhance interpretation of complex experimental datasets. 
-It communicates my capability to design AI models grounded in scientific principles.
-</p>
-<p><strong>Relevance:</strong> 
-Industries such as semiconductors, energy storage, catalysis, and biopharma increasingly rely on AI enhanced 
-materials modeling and data centered research. This artifact highlights how my skillset can contribute to 
-modern R &amp; D environments where scientific reasoning and machine learning are integrated.
-</p>
-<h3>Customization for Audience</h3>
-<p><strong>Adaptations Made:</strong> 
-I designed the artifact to be accessible to non specialists while maintaining technical rigor for scientific 
-and engineering stakeholders. The language focuses on clarity, application, and measurable research impact.
-</p>
-<p><strong>Relevance:</strong> 
-The examples chosen align directly with my background in MOFs, molecular separations, single molecule electronics, 
-and DFT modeling, as well as my career interests in materials informatics, semiconductor analytics, 
-and AI driven scientific computation.
-</p>
-<h3>Reflection</h3>
-<p><strong>Significance:</strong> 
-This artifact formalizes the link between deep learning and my established strengths in computational modeling. 
-It demonstrates my evolution into an AI enabled scientist capable of developing hybrid, physics informed ML solutions 
-for complex scientific problems.
-</p>
-<p><strong>Lessons Learned:</strong> 
-Developing this artifact helped me articulate how neural networks complement physical models rather than replace them. 
-I learned the importance of reliable datasets, validation strategies, transparency, and responsible AI when applying 
-machine learning to scientific systems.
-</p>
-<h3>Feedback and Revisions</h3>
-<p><strong>Feedback:</strong> 
-Preliminary feedback emphasized expanding the scientific applications, clarifying real use cases, 
-and strengthening the alignment between deep learning concepts and my computational chemistry background.
-</p>
-<p><strong>Revisions:</strong> 
-I revised the artifact by adding domain specific examples (DFT approximation, adsorption prediction, 
-STM trace analysis), improving clarity, and aligning the artifact more closely with interdisciplinary R &amp; D expectations.
-</p>
-<h3>References</h3>
-<p>
-Python Software Foundation. (2024). Python programming language.<br/>
-TensorFlow. (2024). TensorFlow machine learning platform.<br/>
-PyTorch. (2024). Deep learning framework.<br/>
-Materials Project. (2024). Materials data and computational resources.<br/>
-SIESTA and Quantum ESPRESSO documentation for DFT modeling.<br/>
-Content developed with assistance from ChatGPT as a writing and structuring tool.
-</p>
+<div class="card split-card">
+  <div class="text-pane">
+    <div class="eyebrow">Artifact 4 • Technical Deep Dive</div>
+    <h2>Deep Learning &amp; Materials</h2>
+    <p class="lead">Explores how graph neural nets and modern deep learning accelerate materials discovery, semiconductor analytics, and lab insights.</p>
+    <div class="inline-meta">
+      <span class="pill">Role: Solo author</span>
+      <span class="pill">Stack: TensorFlow · PyTorch · Scikit-learn</span>
+      <span class="pill">Domains: MOFs · Adsorption · Semiconductors</span>
+    </div>
+    <ul class="checklist">
+      <li><strong>Objective:</strong> connect neural architectures to real R&amp;D tasks, surfacing where AI can augment physics-based methods.</li>
+      <li><strong>Process:</strong> consolidated DFT and adsorption experience → mapped to deep learning approaches → captured validation and ethics guardrails.</li>
+      <li><strong>Audience fit:</strong> balances scientific rigor with clear calls to action for data, metrics, and reproducibility.</li>
+    </ul>
+    <h3>Highlights</h3>
+    <ul class="checklist">
+      <li>Applications: DFT approximation, adsorption prediction, STM trace analysis, and materials screening.</li>
+      <li>Modeling mix: feedforward nets, CNNs, and graph networks with domain-driven validation.</li>
+      <li>Outcome: a roadmap showing where AI accelerates simulations and decision-making.</li>
+    </ul>
+    <h3>Reflections</h3>
+    <p><strong>Significance:</strong> Bridges physics intuition with machine learning to make experimentation faster and smarter.</p>
+    <p><strong>Revisions:</strong> Expanded scientific use cases and clarified how deep learning complements—not replaces—physical models.</p>
+  </div>
+  <div class="image-pane">
+    <img src="assets/ai-materials-grid.svg" alt="Neural grid overlaid on materials pattern"/>
+    <span class="tag">Lab Acceleration</span>
+  </div>
 </div>
 </section>
 <section id="artifact5">

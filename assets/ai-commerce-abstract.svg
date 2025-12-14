@@ -1,0 +1,29 @@
+<svg width="640" height="400" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">AI commerce concierge</title>
+<desc id="desc">Abstract gradient illustration inspired by AI powered shopping and guidance.</desc>
+<defs>
+  <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#6e7bb8" stop-opacity="0.9"/>
+    <stop offset="50%" stop-color="#4d9fea" stop-opacity="0.85"/>
+    <stop offset="100%" stop-color="#bde3ff" stop-opacity="0.9"/>
+  </linearGradient>
+  <radialGradient id="g2" cx="30%" cy="30%" r="70%">
+    <stop offset="0" stop-color="#f4f7ff" stop-opacity="1"/>
+    <stop offset="1" stop-color="#e1e9ff" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="640" height="400" fill="#f8fbff"/>
+<rect x="32" y="32" width="576" height="336" rx="32" fill="url(#g1)" opacity="0.95"/>
+<circle cx="170" cy="210" r="110" fill="url(#g2)"/>
+<circle cx="460" cy="150" r="140" fill="url(#g2)" opacity="0.7"/>
+<path d="M120 270 C180 170 340 180 420 260" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+<path d="M230 180 L330 130 L400 190" fill="none" stroke="#0f1f4f" stroke-opacity="0.2" stroke-width="14" stroke-linecap="round"/>
+<circle cx="232" cy="180" r="22" fill="#ffffff" opacity="0.9"/>
+<circle cx="332" cy="132" r="18" fill="#ffffff" opacity="0.9"/>
+<circle cx="402" cy="190" r="22" fill="#ffffff" opacity="0.9"/>
+<text x="60" y="95" fill="#f1f5ff" font-family="Inter, sans-serif" font-size="28" font-weight="700">AI concierge</text>
+<text x="60" y="130" fill="#e9f2ff" font-family="Inter, sans-serif" font-size="16">tone control · safety · smart routing</text>
+<rect x="150" y="290" width="320" height="48" rx="16" fill="#ffffff" opacity="0.92" stroke="#cddcf6" stroke-width="1.5"/>
+<text x="170" y="320" fill="#3b3c64" font-family="Inter, sans-serif" font-size="16" font-weight="600">How much fabric for a queen duvet?</text>
+<text x="170" y="340" fill="#6a7aa5" font-family="Inter, sans-serif" font-size="13">Assistant: 6 yards for top + backing with 3" trim.</text>
+</svg>
