@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <title>Professional Portfolio — AI-ML Fundamentals</title>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --ink: #2b2d42;
@@ -12,6 +13,7 @@
   --brand: #3b3c64;
   --accent: #4682b4;
   --success: #34c759;
+  --glow: rgba(70, 130, 180, 0.12);
   --line: #e9e3ec;
   --bg: #f5f6fa;
   --card: #ffffff;
@@ -22,7 +24,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-  background: var(--bg);
+  background: radial-gradient(circle at 10% 20%, rgba(70, 130, 180, 0.08), transparent 25%),
+    radial-gradient(circle at 90% 10%, rgba(59, 60, 100, 0.12), transparent 22%),
+    var(--bg);
   color: var(--ink);
   line-height: 1.6;
 }
@@ -37,11 +41,21 @@ a:hover {
 }
 
 header.hero {
-  background: linear-gradient(135deg, var(--brand), #5d5f8f);
+  background: linear-gradient(120deg, var(--brand), #4a4d7d 50%, #6e7bb8);
   color: white;
-  padding: 56px 20px 36px;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 64px 20px 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+header.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.14), transparent 40%),
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.1), transparent 28%);
+  pointer-events: none;
 }
 
 nav.toc {
@@ -100,6 +114,11 @@ section {
   box-shadow: 0 10px 24px rgba(20, 8, 29, 0.1);
 }
 
+.card.outline {
+  border-style: dashed;
+  background: linear-gradient(145deg, rgba(70, 130, 180, 0.06), rgba(255, 255, 255, 0.9));
+}
+
 h1 {
   font-size: 44px;
   margin-bottom: 10px;
@@ -126,6 +145,129 @@ h3 {
   margin-bottom: 8px;
 }
 
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 8px;
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+  backdrop-filter: blur(6px);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 14px 16px;
+  border-radius: 14px;
+  color: white;
+  text-align: left;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.stat .value {font-size: 24px; font-weight: 700; display: block;}
+.stat .label {font-size: 13px; opacity: 0.9;}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-panel {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 18px 18px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.panel-title {font-weight: 700; margin-bottom: 12px; letter-spacing: 0.01em;}
+
+.artifact-map {display: grid; gap: 12px;}
+
+.artifact-chip {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.artifact-chip .pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 12px;
+  color: white;
+}
+
+.artifact-chip strong {color: #fff;}
+
+.accent-section {
+  background: linear-gradient(145deg, rgba(70, 130, 180, 0.1), rgba(255, 255, 255, 0.9));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(20, 8, 29, 0.06);
+  margin: 24px 0;
+}
+
+.artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.visual-card {
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.visual-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(70, 130, 180, 0.12), rgba(59, 60, 100, 0.05));
+  pointer-events: none;
+}
+
+.visual-card h3 {margin-top: 0;}
+
+.visual-card ul {padding-left: 18px; margin: 10px 0;}
+
+.timeline {border-left: 2px solid var(--line); padding-left: 16px; margin: 0; list-style: none;}
+.timeline li {margin: 12px 0; position: relative; padding-left: 10px;}
+.timeline li::before {content: ''; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--accent); background: #fff; position: absolute; left: -22px; top: 6px;}
+
+.pill-muted {color: var(--muted); font-size: 13px;}
+
+.mono {font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;}
+
 footer {
   padding: 40px 20px 60px;
   text-align: center;
@@ -136,10 +278,53 @@ footer {
 </head>
 <body>
 <header class="hero">
-<div class="wrap">
-<h1>Professional Portfolio</h1>
-<p class="subtitle">Selected artifact: <strong>AI‑Powered Projects</strong></p>
-<div class="meta">Portfolio • AI + UX • 2025</div>
+<div class="wrap hero-grid">
+  <div>
+    <h1>Professional Portfolio</h1>
+    <p class="subtitle">Selected artifact: <strong>AI‑Powered Projects</strong></p>
+    <div class="meta">Portfolio • AI + UX • 2025</div>
+    <div class="chips">
+      <span class="chip">Conversational AI</span>
+      <span class="chip">Human‑Centered UX</span>
+      <span class="chip">Scientific R&amp;D</span>
+      <span class="chip">Responsible AI</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="value">5</span><span class="label">Portfolio artifacts mapped to learning outcomes</span></div>
+      <div class="stat"><span class="value">3</span><span class="label">Disciplines: AI/ML, UX, Computational Chemistry</span></div>
+      <div class="stat"><span class="value">1</span><span class="label">Live assistant prototype with test coverage</span></div>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="panel-title">Artifact Alignment Map</div>
+    <div class="artifact-map">
+      <div class="artifact-chip">
+        <span class="pill">#1</span>
+        <div><strong>JayTees Fabric Assistant</strong><br/><span class="pill-muted">AI commerce chatbot • prototype + runbook</span></div>
+        <a href="#artifact1" class="pill">View</a>
+      </div>
+      <div class="artifact-chip">
+        <span class="pill">#2</span>
+        <div><strong>Adaptability &amp; Change</strong><br/><span class="pill-muted">Real-world leadership reflections</span></div>
+        <a href="#artifact2" class="pill">PDF</a>
+      </div>
+      <div class="artifact-chip">
+        <span class="pill">#3</span>
+        <div><strong>Molecules → ML</strong><br/><span class="pill-muted">Interdisciplinary research narrative</span></div>
+        <a href="#artifact3" class="pill">Dive in</a>
+      </div>
+      <div class="artifact-chip">
+        <span class="pill">#4</span>
+        <div><strong>Deep Learning &amp; Materials</strong><br/><span class="pill-muted">Neural networks for scientific discovery</span></div>
+        <a href="#artifact4" class="pill">Read</a>
+      </div>
+      <div class="artifact-chip">
+        <span class="pill">#5</span>
+        <div><strong>Open Template</strong><br/><span class="pill-muted">Ready for the next build</span></div>
+        <a href="#artifact5" class="pill">Plan</a>
+      </div>
+    </div>
+  </div>
 </div>
 </header>
 <nav class="toc">
@@ -155,6 +340,57 @@ footer {
 </div>
 </nav>
 <main class="wrap">
+<section class="accent-section">
+  <h2>Visual Snapshot</h2>
+  <p>Quick view of how each artifact connects AI, UX storytelling, and scientific rigor. Hover to explore the highlights, then dive into the detailed sections below.</p>
+  <div class="artifact-grid">
+    <div class="visual-card">
+      <h3>JayTees Fabric Assistant</h3>
+      <p class="pill-muted">AI e‑commerce concierge for fabric discovery.</p>
+      <ul>
+        <li>Conversational flows tuned for clarity and safety.</li>
+        <li>FastAPI + OpenAI prototype with test harness.</li>
+        <li>Customer-ready FAQ, policies, and yardage logic.</li>
+      </ul>
+    </div>
+    <div class="visual-card">
+      <h3>Adaptability &amp; Change</h3>
+      <p class="pill-muted">Leadership narrative grounded in lived experience.</p>
+      <ul>
+        <li>Storytelling aligned to audience needs.</li>
+        <li>Embedded PDF for rapid reference.</li>
+        <li>Focus on resilient mindsets and collaboration.</li>
+      </ul>
+    </div>
+    <div class="visual-card">
+      <h3>Molecules → Machine Learning</h3>
+      <p class="pill-muted">Interdisciplinary bridge from chemistry to AI.</p>
+      <ul>
+        <li>Highlights neural nets in computational chemistry.</li>
+        <li>Communicates complex ideas with approachable language.</li>
+        <li>Emphasizes adaptation and clear stakeholder updates.</li>
+      </ul>
+    </div>
+    <div class="visual-card">
+      <h3>Deep Learning &amp; Materials</h3>
+      <p class="pill-muted">Neural networks for discovery and R&amp;D analytics.</p>
+      <ul>
+        <li>Applications: MOFs, adsorption, semiconductor analytics.</li>
+        <li>Graph neural nets + domain-driven validation.</li>
+        <li>Positions AI as a force multiplier for lab insights.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card outline">
+    <h3>Journey at a Glance</h3>
+    <ul class="timeline">
+      <li><strong>Empathize &amp; Define:</strong> map user intents and learning goals.</li>
+      <li><strong>Prototype &amp; Test:</strong> build conversational flows, run smoke + scenario tests.</li>
+      <li><strong>Communicate &amp; Adapt:</strong> translate research into visuals and accessible language.</li>
+      <li><strong>Scale &amp; Integrate:</strong> connect AI models to real data and stakeholder needs.</li>
+    </ul>
+  </div>
+</section>
 <section id="bio">
 <div class="card">
 <h2>Professional Bio</h2>
