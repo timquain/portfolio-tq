@@ -1,34 +1,44 @@
-<svg width="640" height="400" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-<title id="title">Bridge from molecules to machine learning</title>
-<desc id="desc">Gradient illustration connecting molecular diagrams with neural connections.</desc>
-<defs>
-  <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#f0f4ff"/>
-    <stop offset="100%" stop-color="#e2f7ff"/>
-  </linearGradient>
-  <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#3b3c64" stop-opacity="0.8"/>
-    <stop offset="100%" stop-color="#6ea8ff" stop-opacity="0.8"/>
-  </linearGradient>
-</defs>
-<rect width="640" height="400" fill="url(#bg)"/>
-<path d="M60 260 Q200 160 320 200 T580 160" fill="none" stroke="url(#line)" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
-<g stroke="#1e2a48" stroke-width="2.5" fill="none" opacity="0.85">
-  <circle cx="140" cy="240" r="60"/>
-  <line x1="140" y1="180" x2="140" y2="300"/>
-  <line x1="100" y1="210" x2="180" y2="270"/>
-  <line x1="100" y1="270" x2="180" y2="210"/>
-</g>
-<g stroke="#2f7ec7" stroke-width="2.5" fill="none" opacity="0.9">
-  <circle cx="500" cy="150" r="70"/>
-  <line x1="430" y1="150" x2="570" y2="150"/>
-  <line x1="500" y1="80" x2="500" y2="220"/>
-  <line x1="450" y1="110" x2="550" y2="190"/>
-  <line x1="450" y1="190" x2="550" y2="110"/>
-</g>
-<circle cx="320" cy="220" r="50" fill="#ffffff" opacity="0.92" stroke="#c3d5ff" stroke-width="3"/>
-<text x="320" y="226" text-anchor="middle" fill="#3b3c64" font-family="Inter, sans-serif" font-size="18" font-weight="700">bridge</text>
-<text x="320" y="248" text-anchor="middle" fill="#6a7aa5" font-family="Inter, sans-serif" font-size="12">chemistry ⇄ ML</text>
-<text x="68" y="90" fill="#2f3a63" font-family="Inter, sans-serif" font-size="22" font-weight="700">Interdisciplinary clarity</text>
-<text x="68" y="120" fill="#64748b" font-family="Inter, sans-serif" font-size="14">molecules · signals · neural intuition</text>
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="twilight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1021"/>
+      <stop offset="45%" stop-color="#1B2450"/>
+      <stop offset="100%" stop-color="#2F4C7C"/>
+    </linearGradient>
+    <linearGradient id="arc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8AE3FF"/>
+      <stop offset="50%" stop-color="#8BA2FF"/>
+      <stop offset="100%" stop-color="#FF9BE8"/>
+    </linearGradient>
+    <linearGradient id="pill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F9FBFF"/>
+      <stop offset="100%" stop-color="#D4E1FF"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#9CF0FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#9CF0FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" rx="24" fill="url(#twilight)"/>
+  <circle cx="250" cy="150" r="200" fill="url(#halo)"/>
+  <circle cx="980" cy="520" r="210" fill="url(#halo)"/>
+  <path d="M90 500C150 430 300 420 420 450C560 486 760 476 920 424C1030 388 1120 400 1140 430V560C1140 606 1102 644 1056 644H148C102 644 64 606 64 560V510C70 506 80 504 90 500Z" fill="#0F172A" fill-opacity="0.55" stroke="#8AE3FF" stroke-opacity="0.35" stroke-width="3"/>
+  <path d="M180 420C180 372 232 344 274 370L470 490C516 519 576 513 614 476L806 294C842 259 904 283 910 335L930 520C936 577 878 621 828 593L212 243C194 232 180 247 180 267V420Z" fill="#0E1628" stroke="#8AE3FF" stroke-width="3"/>
+  <rect x="220" y="160" width="280" height="100" rx="22" fill="#111C31" stroke="#9CE7FF" stroke-opacity="0.6"/>
+  <rect x="260" y="185" width="200" height="16" rx="8" fill="#8AE3FF" fill-opacity="0.85"/>
+  <rect x="260" y="210" width="120" height="14" rx="7" fill="#C7E3FF"/>
+  <rect x="520" y="200" width="450" height="130" rx="28" fill="#F6F8FF" fill-opacity="0.9" stroke="#D1DEFF"/>
+  <rect x="560" y="230" width="280" height="18" rx="9" fill="#CAD9FF"/>
+  <rect x="560" y="255" width="340" height="12" rx="6" fill="#B6C8FF"/>
+  <rect x="560" y="277" width="250" height="12" rx="6" fill="#DDE6FF"/>
+  <rect x="560" y="299" width="210" height="12" rx="6" fill="#DDE6FF"/>
+  <path d="M220 360C360 260 650 260 880 340" stroke="url(#arc)" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="220" cy="360" r="12" fill="#0F172A" stroke="#8AE3FF" stroke-width="6"/>
+  <circle cx="880" cy="340" r="12" fill="#0F172A" stroke="#FF9BE8" stroke-width="6"/>
+  <rect x="240" y="520" width="230" height="90" rx="22" fill="url(#pill)" stroke="#C8D8FF"/>
+  <rect x="520" y="520" width="230" height="90" rx="22" fill="url(#pill)" stroke="#C8D8FF"/>
+  <rect x="800" y="520" width="160" height="90" rx="22" fill="url(#pill)" stroke="#C8D8FF"/>
+  <path d="M320 540C360 520 420 520 460 540" stroke="#8BA2FF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M590 540C640 522 710 522 760 540" stroke="#FF9BE8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M870 540C900 530 950 530 980 540" stroke="#8AE3FF" stroke-width="10" stroke-linecap="round"/>
 </svg>

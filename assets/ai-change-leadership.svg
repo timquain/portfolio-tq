@@ -1,28 +1,42 @@
-<svg width="640" height="400" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-<title id="title">Adaptive change leadership</title>
-<desc id="desc">Interlocking abstract forms representing collaboration and change.</desc>
-<defs>
-  <linearGradient id="warm" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#ffb973"/>
-    <stop offset="100%" stop-color="#f87b9e"/>
-  </linearGradient>
-  <linearGradient id="cool" x1="0%" y1="100%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#8fd3f4"/>
-    <stop offset="100%" stop-color="#84fab0"/>
-  </linearGradient>
-</defs>
-<rect width="640" height="400" fill="#fffaf3"/>
-<g opacity="0.12">
-  <circle cx="180" cy="140" r="120" fill="#f87b9e"/>
-  <circle cx="420" cy="260" r="140" fill="#84fab0"/>
-</g>
-<path d="M120 240 C200 140 320 130 420 210" stroke="#182848" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.25"/>
-<path d="M150 200 C240 120 330 150 420 90" stroke="#f87b9e" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.6"/>
-<path d="M180 300 C260 220 360 260 440 200" stroke="url(#cool)" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.8"/>
-<rect x="240" y="120" width="210" height="150" rx="40" fill="url(#warm)" opacity="0.85"/>
-<rect x="190" y="180" width="210" height="150" rx="40" fill="url(#cool)" opacity="0.85"/>
-<text x="64" y="70" fill="#f59c6a" font-family="Inter, sans-serif" font-size="28" font-weight="700">Change leadership</text>
-<text x="64" y="102" fill="#f87b9e" font-family="Inter, sans-serif" font-size="16">resilience · coaching · clarity</text>
-<text x="64" y="320" fill="#1f2937" font-family="Inter, sans-serif" font-size="16" font-weight="600">"What should we adjust first?"</text>
-<text x="64" y="344" fill="#4b5563" font-family="Inter, sans-serif" font-size="13">Align stakeholders, pilot quickly, and narrate the wins.</text>
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E1726"/>
+      <stop offset="50%" stop-color="#1C2D50"/>
+      <stop offset="100%" stop-color="#224C74"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FEB692"/>
+      <stop offset="50%" stop-color="#EA5455"/>
+      <stop offset="100%" stop-color="#6939FF"/>
+    </linearGradient>
+    <linearGradient id="loop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7EF9C2"/>
+      <stop offset="100%" stop-color="#4DA1FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7EF9C2" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#7EF9C2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" rx="24" fill="url(#night)"/>
+  <circle cx="940" cy="140" r="180" fill="url(#glow)"/>
+  <circle cx="260" cy="540" r="210" fill="url(#glow)"/>
+  <path d="M120 180C220 120 360 130 460 180C600 248 740 238 880 198C1040 152 1120 186 1140 242V525C1140 585 1090 635 1030 635H190C130 635 80 585 80 525V245C92 225 102 202 120 180Z" fill="#122036" fill-opacity="0.55" stroke="#2D6DFF" stroke-opacity="0.35" stroke-width="3"/>
+  <path d="M240 260C240 230 274 214 296 234L430 356C448 373 476 372 494 353L654 187C674 165 710 177 716 206L768 458C773 486 748 511 721 504L260 390C244 386 240 371 240 360V260Z" fill="#101B2F" stroke="#8FCBFF" stroke-width="3"/>
+  <path d="M330 220C330 206 345 197 358 203L442 242C456 249 458 269 445 278L356 343C341 353 320 343 320 325L330 220Z" fill="url(#loop)"/>
+  <path d="M542 258C530 249 531 230 544 223L642 169C658 160 677 173 676 191L667 335C666 353 642 361 630 347L542 258Z" fill="url(#loop)"/>
+  <rect x="560" y="410" width="420" height="140" rx="28" fill="#F6F8FF" fill-opacity="0.94" stroke="#C7D8FF"/>
+  <rect x="600" y="440" width="240" height="22" rx="11" fill="#CDD9FF"/>
+  <rect x="600" y="470" width="300" height="12" rx="6" fill="#A8C4FF"/>
+  <rect x="600" y="492" width="260" height="12" rx="6" fill="#A8C4FF"/>
+  <rect x="600" y="514" width="180" height="12" rx="6" fill="#D6E1FF"/>
+  <rect x="170" y="430" width="260" height="140" rx="24" fill="#122036" stroke="#2D6DFF" stroke-opacity="0.4"/>
+  <rect x="205" y="460" width="190" height="18" rx="9" fill="#1F2E50"/>
+  <rect x="205" y="485" width="150" height="14" rx="7" fill="#28477A"/>
+  <rect x="205" y="510" width="120" height="12" rx="6" fill="#28477A"/>
+  <path d="M260 180C300 120 394 120 440 180" stroke="url(#ribbon)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M760 140C820 130 880 180 880 240" stroke="url(#ribbon)" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="780" cy="180" r="18" fill="#FEB692"/>
+  <circle cx="300" cy="210" r="18" fill="#6939FF"/>
 </svg>

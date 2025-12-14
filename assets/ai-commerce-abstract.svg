@@ -1,29 +1,44 @@
-<svg width="640" height="400" viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-<title id="title">AI commerce concierge</title>
-<desc id="desc">Abstract gradient illustration inspired by AI powered shopping and guidance.</desc>
-<defs>
-  <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#6e7bb8" stop-opacity="0.9"/>
-    <stop offset="50%" stop-color="#4d9fea" stop-opacity="0.85"/>
-    <stop offset="100%" stop-color="#bde3ff" stop-opacity="0.9"/>
-  </linearGradient>
-  <radialGradient id="g2" cx="30%" cy="30%" r="70%">
-    <stop offset="0" stop-color="#f4f7ff" stop-opacity="1"/>
-    <stop offset="1" stop-color="#e1e9ff" stop-opacity="0"/>
-  </radialGradient>
-</defs>
-<rect width="640" height="400" fill="#f8fbff"/>
-<rect x="32" y="32" width="576" height="336" rx="32" fill="url(#g1)" opacity="0.95"/>
-<circle cx="170" cy="210" r="110" fill="url(#g2)"/>
-<circle cx="460" cy="150" r="140" fill="url(#g2)" opacity="0.7"/>
-<path d="M120 270 C180 170 340 180 420 260" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
-<path d="M230 180 L330 130 L400 190" fill="none" stroke="#0f1f4f" stroke-opacity="0.2" stroke-width="14" stroke-linecap="round"/>
-<circle cx="232" cy="180" r="22" fill="#ffffff" opacity="0.9"/>
-<circle cx="332" cy="132" r="18" fill="#ffffff" opacity="0.9"/>
-<circle cx="402" cy="190" r="22" fill="#ffffff" opacity="0.9"/>
-<text x="60" y="95" fill="#f1f5ff" font-family="Inter, sans-serif" font-size="28" font-weight="700">AI concierge</text>
-<text x="60" y="130" fill="#e9f2ff" font-family="Inter, sans-serif" font-size="16">tone control · safety · smart routing</text>
-<rect x="150" y="290" width="320" height="48" rx="16" fill="#ffffff" opacity="0.92" stroke="#cddcf6" stroke-width="1.5"/>
-<text x="170" y="320" fill="#3b3c64" font-family="Inter, sans-serif" font-size="16" font-weight="600">How much fabric for a queen duvet?</text>
-<text x="170" y="340" fill="#6a7aa5" font-family="Inter, sans-serif" font-size="13">Assistant: 6 yards for top + backing with 3" trim.</text>
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1D2B64"/>
+      <stop offset="35%" stop-color="#3A4BA2"/>
+      <stop offset="100%" stop-color="#79C2FF"/>
+    </linearGradient>
+    <linearGradient id="pearl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F9F9FB" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#DCE6FF" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7AE2FF"/>
+      <stop offset="100%" stop-color="#9F7CFF"/>
+    </linearGradient>
+    <radialGradient id="pulse" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#92C4FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" rx="26" fill="url(#sky)"/>
+  <circle cx="980" cy="120" r="180" fill="url(#pulse)"/>
+  <circle cx="240" cy="540" r="200" fill="url(#pulse)"/>
+  <path d="M90 440C180 380 280 340 420 360C610 390 760 340 910 280C1020 236 1100 230 1170 244V600C1170 628 1148 650 1120 650H120C92 650 70 628 70 600V470C80 462 84 450 90 440Z" fill="#0F172A" fill-opacity="0.16" stroke="#8FB7FF" stroke-opacity="0.35" stroke-width="3"/>
+  <rect x="150" y="180" width="380" height="240" rx="28" fill="url(#pearl)" stroke="#D9E5FF" stroke-width="2"/>
+  <rect x="190" y="230" width="300" height="28" rx="14" fill="#D6E4FF"/>
+  <rect x="190" y="270" width="220" height="16" rx="8" fill="#C1D8FF"/>
+  <rect x="190" y="300" width="260" height="16" rx="8" fill="#C1D8FF"/>
+  <rect x="190" y="330" width="180" height="16" rx="8" fill="#C1D8FF"/>
+  <rect x="560" y="240" width="480" height="210" rx="30" fill="#0F172A" fill-opacity="0.4" stroke="#8AD7FF" stroke-opacity="0.5" stroke-width="2"/>
+  <rect x="590" y="260" width="180" height="30" rx="14" fill="#72E4C2" fill-opacity="0.9"/>
+  <rect x="820" y="260" width="180" height="30" rx="14" fill="#9F7CFF" fill-opacity="0.9"/>
+  <rect x="610" y="320" width="360" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.8"/>
+  <rect x="610" y="350" width="260" height="18" rx="9" fill="#C7E7FF"/>
+  <rect x="610" y="380" width="310" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.75"/>
+  <circle cx="210" cy="210" r="26" fill="#9F7CFF" fill-opacity="0.9"/>
+  <circle cx="980" cy="330" r="34" fill="#72E4C2" fill-opacity="0.85"/>
+  <path d="M210 206C220 206 226 214 226 222C226 234 216 246 206 248C196 246 186 234 186 222C186 214 192 206 202 206" stroke="#F9F9FB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M946 322C952 314 964 312 974 316C991 323 1000 342 993 359C986 376 967 385 949 378C936 372 928 358 930 344" stroke="#0F172A" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round"/>
+  <path d="M280 520C360 470 430 455 520 474C650 502 760 468 850 438" stroke="url(#accent)" stroke-width="16" stroke-linecap="round" stroke-opacity="0.9"/>
+  <circle cx="520" cy="474" r="10" fill="#0F172A" stroke="#8AD7FF" stroke-width="6"/>
+  <circle cx="850" cy="438" r="10" fill="#0F172A" stroke="#9F7CFF" stroke-width="6"/>
+  <circle cx="280" cy="520" r="10" fill="#0F172A" stroke="#72E4C2" stroke-width="6"/>
 </svg>
