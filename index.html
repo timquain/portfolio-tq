@@ -194,6 +194,13 @@ h3 {
 }
 .split-card .image-pane img {width: 100%; height: 100%; object-fit: cover; display: block; filter: drop-shadow(0 12px 28px rgba(20, 8, 29, 0.18));}
 
+.split-card .image-pane img.infographic-artifact {
+  object-fit: contain;
+  padding: 18px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
 .split-card .image-pane .tag {
   position: absolute;
   bottom: 16px;
@@ -237,6 +244,14 @@ h3 {
 }
 
 .landscape-grid img {width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: multiply;}
+
+.landscape-grid img.infographic-artifact {
+  object-fit: contain;
+  padding: 12px;
+  box-sizing: border-box;
+  background: #fff;
+  mix-blend-mode: normal;
+}
 
 .landscape-grid figcaption {
   position: absolute;
@@ -513,7 +528,7 @@ footer {
       <figcaption><strong>AI/ML Leadership Framework</strong>Human-centered leadership blueprint linking mission, values, and action plans for chemistry and STEM education.</figcaption>
     </figure>
     <figure>
-      <img src="assets/machine_learning_algorithms_a_comparison_guide.png" alt="Machine learning algorithms visual framework infographic"/>
+      <img class="infographic-artifact" src="assets/infographic_ml_algorithms_TQ.png" alt="Machine learning algorithms visual framework infographic"/>
       <figcaption><strong>Machine Learning Algorithms</strong>Visual classification map comparing supervised and unsupervised algorithms across domains, use cases, and model logic.</figcaption>
     </figure>
   </div>
@@ -807,7 +822,7 @@ footer {
     <p><strong>Relevance:</strong> It strengthens my portfolio by showing that I can move beyond definitions and organize machine learning knowledge in a way that is useful for instructors, employers, technical collaborators, and non-technical stakeholders.</p>
   </div>
   <div class="image-pane">
-    <img src="assets/machine_learning_algorithms_a_comparison_guide.png" alt="Infographic comparing machine learning algorithms"/>
+    <img class="infographic-artifact" src="assets/infographic_ml_algorithms_TQ.png" alt="Infographic comparing machine learning algorithms"/>
     <span class="tag">ML Taxonomy</span>
   </div>
 </div>
@@ -815,7 +830,7 @@ footer {
   <h3>Infographic Preview</h3>
   <p>The visual framework compares linear regression, logistic regression, decision tree, random forest, support vector machine, convolutional neural network, K-means clustering, principal component analysis, autoencoder, and generative adversarial network. Each algorithm is organized by type, domain, use case, and mechanism.</p>
   <figure class="full-width-visual">
-    <img src="assets/machine_learning_algorithms_a_comparison_guide.png" alt="Full machine learning algorithms infographic"/>
+    <img src="assets/infographic_ml_algorithms_TQ.png" alt="Full machine learning algorithms infographic"/>
   </figure>
 </div>
 <div class="card">
