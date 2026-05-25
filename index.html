@@ -5,28 +5,34 @@
 <meta charset="utf-8"/>
 <title>Timothy Quainoo - AI/ML Portfolio</title>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ink: #2b2d42;
-  --muted: #8d99ae;
-  --brand: #3b3c64;
-  --accent: #4682b4;
-  --success: #34c759;
-  --glow: rgba(70, 130, 180, 0.12);
-  --line: #e9e3ec;
-  --bg: #f5f6fa;
-  --card: #ffffff;
-  --hover: #eef2f7;
+  --ink: #20241f;
+  --muted: #6f766f;
+  --brand: #26352b;
+  --accent: #b95f3d;
+  --accent-2: #2f7f74;
+  --success: #3d8d5a;
+  --glow: rgba(185, 95, 61, 0.13);
+  --line: #d9d4c8;
+  --bg: #f4efe4;
+  --card: #fffcf4;
+  --hover: #ebe4d6;
+  --shadow: rgba(47, 38, 29, 0.12);
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-  background: radial-gradient(circle at 10% 20%, rgba(70, 130, 180, 0.08), transparent 25%),
-    radial-gradient(circle at 90% 10%, rgba(59, 60, 100, 0.12), transparent 22%),
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  background:
+    linear-gradient(90deg, rgba(32, 36, 31, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(32, 36, 31, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 18% 12%, rgba(185, 95, 61, 0.12), transparent 24%),
+    radial-gradient(circle at 86% 18%, rgba(47, 127, 116, 0.11), transparent 26%),
     var(--bg);
+  background-size: 36px 36px, 36px 36px, auto, auto, auto;
   color: var(--ink);
   line-height: 1.6;
 }
@@ -41,12 +47,16 @@ a:hover {
 }
 
 header.hero {
-  background: linear-gradient(120deg, var(--brand), #4a4d7d 50%, #6e7bb8);
-  color: white;
-  padding: 64px 20px 50px;
+  background:
+    linear-gradient(135deg, rgba(32, 36, 31, 0.98), rgba(38, 53, 43, 0.96) 58%, rgba(47, 127, 116, 0.88)),
+    url("assets/neural-network-architecture-preview.svg");
+  background-size: cover;
+  background-position: center;
+  color: #fffaf0;
+  padding: 74px 20px 58px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 44px rgba(47, 38, 29, 0.2);
 }
 
 header.hero::after {
@@ -61,7 +71,7 @@ header.hero::after {
 nav.toc {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(244, 239, 228, 0.88);
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid var(--line);
   z-index: 10;
@@ -77,7 +87,7 @@ nav.toc .wrap {
 
 nav.toc a {
   padding: 8px 12px;
-  border-radius: 8px;
+  border-radius: 999px;
   font-size: 14px;
   background: var(--hover);
   border: 1px solid transparent;
@@ -103,15 +113,15 @@ section {
 .card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 24px;
-  box-shadow: 0 6px 18px rgba(20, 8, 29, 0.05);
+  box-shadow: 0 14px 36px var(--shadow);
   margin: 20px 0;
   transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 10px 24px rgba(20, 8, 29, 0.1);
+  box-shadow: 0 18px 42px rgba(47, 38, 29, 0.16);
 }
 
 .card.outline {
@@ -120,12 +130,16 @@ section {
 }
 
 h1 {
-  font-size: 44px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(48px, 9vw, 92px);
+  line-height: 0.92;
   margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 28px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.05;
   margin-bottom: 16px;
 }
 
@@ -136,14 +150,14 @@ h3 {
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.16em;
   font-weight: 700;
   font-size: 12px;
   color: var(--muted);
 }
 
 .lead {
-  font-size: 18px;
+  font-size: 19px;
   color: #3d405b;
   margin-top: 8px;
 }
@@ -156,11 +170,11 @@ h3 {
 }
 
 .feature-tiles .tile {
-  background: #fff;
+  background: #fffaf0;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 8px 22px rgba(20, 8, 29, 0.06);
+  box-shadow: 0 10px 24px var(--shadow);
   position: relative;
   overflow: hidden;
 }
@@ -183,14 +197,14 @@ h3 {
   gap: 24px;
   align-items: center;
   padding: 0;
-  border-radius: 18px;
+  border-radius: 8px;
   overflow: hidden;
 }
-.split-card .text-pane {padding: 26px; background: #fff;}
+.split-card .text-pane {padding: 30px; background: #fffaf0;}
 .split-card .image-pane {
   position: relative;
   min-height: 260px;
-  background: linear-gradient(160deg, rgba(70, 130, 180, 0.16), rgba(59, 60, 100, 0.12));
+  background: linear-gradient(160deg, rgba(185, 95, 61, 0.16), rgba(47, 127, 116, 0.13));
 }
 .split-card .image-pane img {width: 100%; height: 100%; object-fit: cover; display: block; filter: drop-shadow(0 12px 28px rgba(20, 8, 29, 0.18));}
 
@@ -218,7 +232,7 @@ h3 {
 
 .checklist {list-style: none; padding: 0; margin: 12px 0;}
 .checklist li {display: flex; align-items: flex-start; gap: 10px; padding: 8px 0;}
-.checklist li::before {content: '✔'; color: var(--accent); font-weight: 700;}
+.checklist li::before {content: ''; width: 8px; height: 8px; margin-top: 9px; border-radius: 50%; background: var(--accent); flex: 0 0 auto;}
 
 .gallery-row {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 16px;}
 .gallery-row figure {margin: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 6px 18px rgba(20, 8, 29, 0.06);}
@@ -227,43 +241,77 @@ h3 {
 
 .landscape-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
   margin-top: 16px;
 }
 
 .landscape-grid figure {
   margin: 0;
   position: relative;
-  aspect-ratio: 16 / 9;
-  border-radius: 18px;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: linear-gradient(135deg, rgba(70, 130, 180, 0.14), rgba(59, 60, 100, 0.08));
-  box-shadow: 0 14px 32px rgba(20, 8, 29, 0.12);
+  background:
+    radial-gradient(circle at 20% 12%, rgba(255, 252, 244, 0.85), transparent 28%),
+    linear-gradient(135deg, rgba(255, 252, 244, 0.95), rgba(235, 228, 214, 0.72)),
+    linear-gradient(135deg, rgba(185, 95, 61, 0.12), rgba(47, 127, 116, 0.12));
+  box-shadow: 0 18px 36px rgba(47, 38, 29, 0.14);
+  isolation: isolate;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
-.landscape-grid img {width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: multiply;}
+.landscape-grid figure::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(255, 252, 244, 0.24);
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.landscape-grid figure:hover {
+  transform: translateY(-4px);
+  border-color: rgba(185, 95, 61, 0.42);
+  box-shadow: 0 24px 48px rgba(47, 38, 29, 0.18);
+}
+
+.landscape-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+  filter: saturate(1.06) contrast(1.03);
+  transition: transform 0.34s ease, filter 0.34s ease;
+}
+
+.landscape-grid figure:hover img {
+  transform: scale(1.035);
+  filter: saturate(1.12) contrast(1.06);
+}
 
 .landscape-grid img.infographic-artifact {
   object-fit: contain;
-  padding: 12px;
+  padding: clamp(10px, 2vw, 18px);
   box-sizing: border-box;
   background: #fff;
-  mix-blend-mode: normal;
 }
 
 .landscape-grid figcaption {
   position: absolute;
   inset: auto 14px 12px 14px;
   padding: 10px 12px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.82);
+  border-radius: 8px;
+  background: rgba(255, 252, 244, 0.9);
   backdrop-filter: blur(6px);
   font-size: 13px;
   color: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 10px 24px rgba(20, 8, 29, 0.08);
+  border: 1px solid rgba(217, 212, 200, 0.78);
+  box-shadow: 0 10px 24px rgba(47, 38, 29, 0.08);
+  z-index: 2;
 }
 
 .landscape-grid figcaption strong {display: block; font-weight: 700; margin-bottom: 4px;}
@@ -288,7 +336,7 @@ h3 {
 
 .chip {
   padding: 8px 12px;
-  border-radius: 12px;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -307,7 +355,7 @@ h3 {
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 14px 16px;
-  border-radius: 14px;
+  border-radius: 8px;
   color: white;
   text-align: left;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -318,49 +366,51 @@ h3 {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(300px, 1fr);
+  gap: clamp(28px, 6vw, 76px);
   position: relative;
   z-index: 1;
 }
 
 .hero-panel {
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 18px;
-  padding: 18px 18px 8px;
+  align-self: end;
+  background: rgba(255, 250, 240, 0.1);
+  border-radius: 8px;
+  padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-.panel-title {font-weight: 700; margin-bottom: 12px; letter-spacing: 0.01em;}
-
-.artifact-map {display: grid; gap: 12px;}
-
-.artifact-chip {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 12px;
-  align-items: center;
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.hero-panel h2 {
+  color: #fffaf0;
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 42px);
 }
 
-.artifact-chip .pill {
-  padding: 6px 10px;
+.hero-panel p {
+  color: rgba(255, 250, 240, 0.84);
+  margin: 0 0 18px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-actions a {
+  padding: 10px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  font-size: 12px;
-  color: white;
+  background: rgba(255, 250, 240, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  color: #fffaf0;
+  font-weight: 700;
 }
-
-.artifact-chip strong {color: #fff;}
 
 .accent-section {
-  background: linear-gradient(145deg, rgba(70, 130, 180, 0.1), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(145deg, rgba(185, 95, 61, 0.12), rgba(255, 250, 240, 0.92));
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 8px;
   padding: 24px;
   box-shadow: 0 12px 30px rgba(20, 8, 29, 0.06);
   margin: 24px 0;
@@ -374,7 +424,7 @@ h3 {
 }
 
 .visual-card {
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 18px;
   border: 1px solid var(--line);
   background: #fff;
@@ -505,6 +555,82 @@ footer {
   font-size: 14px;
   color: var(--muted);
 }
+
+.subtitle {
+  max-width: 720px;
+  font-size: clamp(20px, 3vw, 30px);
+  line-height: 1.25;
+  margin: 18px 0 12px;
+  color: rgba(255, 250, 240, 0.9);
+}
+
+.meta {
+  color: rgba(255, 250, 240, 0.76);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 12px;
+}
+
+main.wrap {
+  padding-top: 24px;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+.accent-section,
+.card {
+  position: relative;
+}
+
+.accent-section::before,
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-top: 3px solid rgba(185, 95, 61, 0.42);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.landscape-grid figure,
+.full-width-visual,
+.slide-embed,
+.gallery-row figure {
+  border-radius: 8px;
+}
+
+.landscape-grid figcaption {
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  header.hero {
+    padding: 54px 18px 42px;
+  }
+
+  .hero-grid,
+  .split-card {
+    grid-template-columns: 1fr;
+  }
+
+  .landscape-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landscape-grid figcaption {
+    position: static;
+    border-width: 1px 0 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .slide-strip {
+    grid-auto-columns: minmax(250px, 88%);
+  }
+}
 </style>
 </head>
 <body>
@@ -513,7 +639,7 @@ footer {
   <div>
     <h1>Timothy Quainoo</h1>
     <p class="subtitle">AI/ML portfolio grounded in chemistry, product thinking, and human-centered design.</p>
-    <div class="meta">AI/ML Leader • Computational Chemistry • 2025</div>
+    <div class="meta">AI/ML Leader • Computational Chemistry • 2026</div>
     <div class="chips">
       <span class="chip">Conversational AI</span>
       <span class="chip">Human-Centered UX</span>
@@ -527,43 +653,11 @@ footer {
     </div>
   </div>
   <div class="hero-panel">
-    <div class="panel-title">Artifact Alignment Map</div>
-    <div class="artifact-map">
-      <div class="artifact-chip">
-        <span class="pill">#1</span>
-        <div><strong>JayTees Fabric Assistant</strong><br/><span class="pill-muted">AI commerce chatbot • prototype + runbook</span></div>
-        <a href="#artifact1" class="pill">View</a>
-      </div>
-      <div class="artifact-chip">
-        <span class="pill">#2</span>
-        <div><strong>Adaptability &amp; Change</strong><br/><span class="pill-muted">Real-world leadership reflections</span></div>
-        <a href="#artifact2" class="pill">PDF</a>
-      </div>
-      <div class="artifact-chip">
-        <span class="pill">#3</span>
-        <div><strong>Molecules → ML</strong><br/><span class="pill-muted">Interdisciplinary research narrative</span></div>
-        <a href="#artifact3" class="pill">Dive in</a>
-      </div>
-      <div class="artifact-chip">
-        <span class="pill">#4</span>
-        <div><strong>Deep Learning &amp; Materials</strong><br/><span class="pill-muted">Neural networks for scientific discovery</span></div>
-        <a href="#artifact4" class="pill">Read</a>
-      </div>
-      <div class="artifact-chip">
-        <span class="pill">#5</span>
-        <div><strong>AI/ML Leadership Framework</strong><br/><span class="pill-muted">Values-driven playbook for STEM teams</span></div>
-        <a href="#artifact5" class="pill">Lead</a>
-      </div>
-      <div class="artifact-chip">
-        <span class="pill">#6</span>
-        <div><strong>Machine Learning Algorithms</strong><br/><span class="pill-muted">Visual framework for algorithm classification</span></div>
-        <a href="#artifact6" class="pill">View</a>
-      </div>
-      <div class="artifact-chip">
-        <span class="pill">#7</span>
-        <div><strong>Neural Network Architecture</strong><br/><span class="pill-muted">Visual presentation on components and data flow</span></div>
-        <a href="#artifact7" class="pill">Slides</a>
-      </div>
+    <h2>Seven artifacts, one focused story.</h2>
+    <p>Evidence spans a live AI assistant prototype, scientific machine learning translation, leadership reflection, algorithm communication, and neural network architecture.</p>
+    <div class="hero-actions">
+      <a href="#artifact1">Start with the prototype</a>
+      <a href="#snapshot">View snapshots</a>
     </div>
   </div>
 </div>
@@ -572,20 +666,24 @@ footer {
 <div class="wrap">
 <a href="#bio">Professional Bio</a>
 <a href="#value">Value Proposition &amp; Audience</a>
-<a href="#artifacts">Artifacts</a>
-<a href="#artifact1">Artifact 1 - JayTees Fabric Assistant</a>
-<a href="#artifact2">Artifact 2 - Adaptability &amp; Change Leadership</a>
-<a href="#artifact3">Artifact 3 - From Molecules to Machine Learning</a>
-<a href="#artifact4">Artifact 4 Deep Learning and Neural Networks</a>
-<a href="#artifact5">Artifact 5 - AI/ML Leadership Framework</a>
-<a href="#artifact6">Artifact 6 - Machine Learning Algorithms</a>
-<a href="#artifact7">Artifact 7 - Neural Network Architecture</a>
+<a href="#artifact1">Fabric Assistant</a>
+<a href="#artifact2">Change Leadership</a>
+<a href="#artifact3">Molecules to ML</a>
+<a href="#artifact4">Deep Learning</a>
+<a href="#artifact5">Leadership Framework</a>
+<a href="#artifact6">ML Algorithms</a>
+<a href="#artifact7">Network Architecture</a>
 </div>
 </nav>
 <main class="wrap">
-<section class="accent-section">
-  <h2>Visual Snapshot</h2>
-  <p class="lead">Quick view of how each artifact connects AI, UX storytelling, and scientific rigor. Skim the gallery, then dive into the detailed sections below.</p>
+<section class="accent-section" id="snapshot">
+  <div>
+    <div>
+      <div class="eyebrow">Portfolio at a glance</div>
+      <h2>Visual Snapshot</h2>
+      <p class="lead">A composed overview of how each artifact connects AI, UX storytelling, and scientific rigor before the detailed evidence sections.</p>
+    </div>
+  </div>
   <div class="landscape-grid">
     <figure>
       <img src="assets/ai-commerce-abstract.svg" alt="Landscape storefront dashboard with human shoppers and AI associate"/>
@@ -616,56 +714,6 @@ footer {
       <figcaption><strong>Neural Network Architecture</strong>Slide-based walkthrough of layers, neurons, activation functions, loss, optimization, and model interpretability.</figcaption>
     </figure>
   </div>
-  <div class="feature-tiles">
-    <div class="tile">
-      <h3>Hero Flow</h3>
-      <p>Conversational guardrails, clarifying questions, and microcopy tuned for shoppers.</p>
-      <ul class="pill-muted">
-        <li>Scenario tests for refunds, shipping, and fabric care.</li>
-        <li>Product cards + routing rules for better recommendations.</li>
-      </ul>
-    </div>
-    <div class="tile">
-      <h3>Audience Fit</h3>
-      <p>Leaders, assessors, and founders see tailored narratives and embedded proof.</p>
-      <ul class="pill-muted">
-        <li>PDF reference inside the page.</li>
-        <li>Contextual badges for scope, role, and stack.</li>
-      </ul>
-    </div>
-    <div class="tile">
-      <h3>AI + Research</h3>
-      <p>Domain bridges from chemistry to neural nets with clear validation checkpoints.</p>
-      <ul class="pill-muted">
-        <li>Rigor: datasets, metrics, safety stance.</li>
-        <li>Value: faster iteration and informed decisioning.</li>
-      </ul>
-    </div>
-    <div class="tile">
-      <h3>Journey</h3>
-      <p>From empathizing with users to scaling prototypes into repeatable runbooks.</p>
-      <ul class="pill-muted">
-        <li>Empathize → Prototype → Test → Integrate.</li>
-        <li>Each artifact tagged with role, stack, and outcome.</li>
-      </ul>
-    </div>
-    <div class="tile">
-      <h3>ML Classification</h3>
-      <p>Algorithm families are organized by learning type, application domain, and real-world use case.</p>
-      <ul class="pill-muted">
-        <li>Supervised and unsupervised learning are compared side by side.</li>
-        <li>Visual hierarchy supports fast interpretation for technical and non-technical audiences.</li>
-      </ul>
-    </div>
-    <div class="tile">
-      <h3>Network Architecture</h3>
-      <p>Core neural network components are presented as a structured learning path from inputs to optimization.</p>
-      <ul class="pill-muted">
-        <li>Layered diagrams explain feedforward data flow.</li>
-        <li>Training concepts connect loss, gradients, and model tuning.</li>
-      </ul>
-    </div>
-  </div>
 </section>
 <section id="bio">
 <div class="card">
@@ -686,20 +734,6 @@ footer {
 </ul>
 </div>
 </section>
-<section id="artifacts">
-<div class="card">
-<h2>Artifacts</h2>
-<ul>
-<li><a href="#artifact1">Artifact 1 - JayTees Fabric Assistant (AI E-commerce Chatbot)</a></li>
-  <li><a href="#artifact2">Artifact 2 - Adaptability &amp; Change Leadership</a></li>
-  <li><a href="#artifact3">Artifact 3 - From Molecules to Machine Learning: An Integrated Approach to Research, Adaptation, and Communication</a></li>
-  <li><a href="#artifact4">Artifact 4 - Deep Learning and Neural Networks for Chemistry, Materials Science, and AI Driven Discovery</a></li>
-  <li><a href="#artifact5">Artifact 5 - Personal AI/ML Leadership Framework</a></li>
-  <li><a href="#artifact6">Artifact 6 - Machine Learning Algorithms: A Visual Framework</a></li>
-  <li><a href="#artifact7">Artifact 7 - Neural Network Architecture: Visual Presentation</a></li>
-  </ul>
-  </div>
-  </section>
 <section id="artifact1">
 <div class="card split-card">
   <div class="text-pane">
@@ -732,7 +766,6 @@ footer {
   </div>
 </div>
 </section>
-<!-- Templates for Artifacts 2-5 -->
 <section id="artifact2">
 <div class="card split-card">
   <div class="text-pane">
@@ -1098,7 +1131,7 @@ footer {
 </section>
 
 </main>
-<footer>© 2025 • Professional Portfolio • Timothy Quainoo</footer>
+<footer>© 2026 • Professional Portfolio • Timothy Quainoo</footer>
 <script>
     // Smooth scroll for ToC
     document.querySelectorAll('nav.toc a').forEach(a=>{

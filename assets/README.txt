@@ -1,1 +1,0 @@
-Place screenshots here and link them from index.html.

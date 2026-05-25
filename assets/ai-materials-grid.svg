@@ -30,31 +30,48 @@
       <stop offset="0%" stop-color="#9A6CFF"/>
       <stop offset="100%" stop-color="#55C0FF"/>
     </linearGradient>
+    <pattern id="crystalField" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M0 32H64M32 0V64M10 10L54 54M54 10L10 54" stroke="#7CF5C4" stroke-opacity="0.08" stroke-width="2"/>
+      <circle cx="32" cy="32" r="4" fill="#7CF5C4" fill-opacity="0.14"/>
+    </pattern>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#020814" flood-opacity="0.32"/>
+    </filter>
   </defs>
   <rect width="1200" height="675" rx="28" fill="url(#twilight)"/>
+  <rect width="1200" height="675" rx="28" fill="url(#crystalField)"/>
   <rect x="90" y="70" width="1020" height="535" rx="26" fill="#0C1C31" stroke="#1E3F63" stroke-width="2"/>
   <circle cx="300" cy="180" r="190" fill="url(#aura)"/>
   <circle cx="900" cy="520" r="210" fill="url(#aura)"/>
-  <rect x="180" y="160" width="360" height="260" rx="22" fill="#0E2239" stroke="#25517D"/>
+  <rect x="180" y="160" width="360" height="260" rx="22" fill="#0E2239" stroke="#25517D" filter="url(#cardShadow)"/>
   <rect x="210" y="190" width="300" height="200" rx="16" fill="#0A182A" stroke="#2A5A8A"/>
   <path d="M230 220H480" stroke="#7CF5C4" stroke-width="5" stroke-linecap="round" stroke-dasharray="14 12" opacity="0.6"/>
   <path d="M230 260H480" stroke="#55C0FF" stroke-width="5" stroke-linecap="round" stroke-dasharray="14 12" opacity="0.6"/>
   <path d="M230 300H480" stroke="#9A6CFF" stroke-width="5" stroke-linecap="round" stroke-dasharray="14 12" opacity="0.6"/>
+  <path d="M250 330L300 288L350 330L400 288L458 330" stroke="url(#lattice)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="300" cy="288" r="9" fill="#7CF5C4" stroke="#0A1121" stroke-width="3"/>
+  <circle cx="400" cy="288" r="9" fill="#55C0FF" stroke="#0A1121" stroke-width="3"/>
   <rect x="220" y="340" width="260" height="20" rx="10" fill="#112C47"/>
   <rect x="440" y="215" width="40" height="190" rx="14" fill="#112C47"/>
-  <rect x="520" y="200" width="160" height="280" rx="24" fill="#0D2034" stroke="#2A5A8A"/>
+  <rect x="520" y="200" width="160" height="280" rx="24" fill="#0D2034" stroke="#2A5A8A" filter="url(#cardShadow)"/>
   <path d="M540 240H660" stroke="#7CF5C4" stroke-width="6" stroke-linecap="round"/>
   <path d="M540 270H670" stroke="#55C0FF" stroke-width="6" stroke-linecap="round"/>
   <path d="M540 300H650" stroke="#7CF5C4" stroke-width="6" stroke-linecap="round"/>
   <path d="M540 330H660" stroke="#55C0FF" stroke-width="6" stroke-linecap="round"/>
   <path d="M540 360H620" stroke="#7CF5C4" stroke-width="6" stroke-linecap="round"/>
-  <rect x="740" y="200" width="280" height="260" rx="26" fill="#0D1F32" stroke="#25517D"/>
+  <path d="M630 232V388" stroke="#9A6CFF" stroke-opacity="0.5" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="630" cy="270" r="9" fill="#9A6CFF"/>
+  <circle cx="630" cy="330" r="9" fill="#55C0FF"/>
+  <rect x="740" y="200" width="280" height="260" rx="26" fill="#0D1F32" stroke="#25517D" filter="url(#cardShadow)"/>
   <rect x="770" y="230" width="220" height="110" rx="18" fill="#0B1627" stroke="#25517D"/>
   <path d="M790 250H970" stroke="#7CF5C4" stroke-width="6" stroke-linecap="round"/>
   <path d="M790 276H950" stroke="#55C0FF" stroke-width="6" stroke-linecap="round"/>
   <rect x="770" y="360" width="220" height="60" rx="14" fill="#0B1627" stroke="#25517D"/>
   <path d="M790 385H950" stroke="#9A6CFF" stroke-width="6" stroke-linecap="round"/>
   <path d="M820 410H920" stroke="#55C0FF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M788 324C836 292 892 346 970 300" stroke="#7CF5C4" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="836" cy="308" r="7" fill="#55C0FF"/>
+  <circle cx="916" cy="322" r="7" fill="#9A6CFF"/>
   <rect x="680" y="500" width="140" height="28" rx="14" fill="#7CF5C4" fill-opacity="0.18" stroke="#7CF5C4" stroke-opacity="0.7"/>
   <rect x="850" y="500" width="140" height="28" rx="14" fill="#9A6CFF" fill-opacity="0.22" stroke="#9A6CFF" stroke-opacity="0.7"/>
   <path d="M230 220L340 120C348 112 360 112 368 120L470 220" stroke="url(#lattice)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
