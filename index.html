@@ -423,6 +423,80 @@ h3 {
   margin-bottom: 8px;
 }
 
+.assignment-text-area {
+  min-height: 160px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfdff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.slide-embed {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #eef2f7;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(20, 8, 29, 0.1);
+}
+
+.slide-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 72%);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 18px;
+}
+
+.embedded-slide {
+  min-height: 420px;
+  scroll-snap-align: start;
+  background: linear-gradient(135deg, #182039, #3b3c64 54%, #4682b4);
+  color: #fff;
+  border-radius: 10px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 12px 28px rgba(20, 8, 29, 0.18);
+}
+
+.embedded-slide:nth-child(even) {
+  background: linear-gradient(135deg, #fff, #eef2f7);
+  color: var(--ink);
+}
+
+.embedded-slide .slide-number {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  font-weight: 700;
+}
+
+.embedded-slide h4 {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 18px 0 14px;
+}
+
+.embedded-slide p,
+.embedded-slide li {
+  font-size: 16px;
+}
+
+.embedded-slide ul {
+  padding-left: 20px;
+}
+
+.slide-note {
+  padding: 0 18px 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .mono {font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;}
 
 footer {
@@ -447,7 +521,7 @@ footer {
       <span class="chip">Responsible AI</span>
     </div>
     <div class="stats">
-      <div class="stat"><span class="value">6</span><span class="label">Portfolio artifacts mapped to learning outcomes</span></div>
+      <div class="stat"><span class="value">7</span><span class="label">Portfolio artifacts mapped to learning outcomes</span></div>
       <div class="stat"><span class="value">3</span><span class="label">Disciplines: AI/ML, UX, Computational Chemistry</span></div>
       <div class="stat"><span class="value">1</span><span class="label">Live assistant prototype with test coverage</span></div>
     </div>
@@ -485,6 +559,11 @@ footer {
         <div><strong>Machine Learning Algorithms</strong><br/><span class="pill-muted">Visual framework for algorithm classification</span></div>
         <a href="#artifact6" class="pill">View</a>
       </div>
+      <div class="artifact-chip">
+        <span class="pill">#7</span>
+        <div><strong>Neural Network Architecture</strong><br/><span class="pill-muted">Visual presentation on components and data flow</span></div>
+        <a href="#artifact7" class="pill">Slides</a>
+      </div>
     </div>
   </div>
 </div>
@@ -500,6 +579,7 @@ footer {
 <a href="#artifact4">Artifact 4 Deep Learning and Neural Networks</a>
 <a href="#artifact5">Artifact 5 - AI/ML Leadership Framework</a>
 <a href="#artifact6">Artifact 6 - Machine Learning Algorithms</a>
+<a href="#artifact7">Artifact 7 - Neural Network Architecture</a>
 </div>
 </nav>
 <main class="wrap">
@@ -530,6 +610,10 @@ footer {
     <figure>
       <img class="infographic-artifact" src="assets/infographic_ml_algorithms_TQ.png" alt="Machine learning algorithms visual framework infographic"/>
       <figcaption><strong>Machine Learning Algorithms</strong>Visual classification map comparing supervised and unsupervised algorithms across domains, use cases, and model logic.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/neural-network-architecture-preview.svg" alt="Neural network architecture visual presentation preview"/>
+      <figcaption><strong>Neural Network Architecture</strong>Slide-based walkthrough of layers, neurons, activation functions, loss, optimization, and model interpretability.</figcaption>
     </figure>
   </div>
   <div class="feature-tiles">
@@ -573,6 +657,14 @@ footer {
         <li>Visual hierarchy supports fast interpretation for technical and non-technical audiences.</li>
       </ul>
     </div>
+    <div class="tile">
+      <h3>Network Architecture</h3>
+      <p>Core neural network components are presented as a structured learning path from inputs to optimization.</p>
+      <ul class="pill-muted">
+        <li>Layered diagrams explain feedforward data flow.</li>
+        <li>Training concepts connect loss, gradients, and model tuning.</li>
+      </ul>
+    </div>
   </div>
 </section>
 <section id="bio">
@@ -604,6 +696,7 @@ footer {
   <li><a href="#artifact4">Artifact 4 - Deep Learning and Neural Networks for Chemistry, Materials Science, and AI Driven Discovery</a></li>
   <li><a href="#artifact5">Artifact 5 - Personal AI/ML Leadership Framework</a></li>
   <li><a href="#artifact6">Artifact 6 - Machine Learning Algorithms: A Visual Framework</a></li>
+  <li><a href="#artifact7">Artifact 7 - Neural Network Architecture: Visual Presentation</a></li>
   </ul>
   </div>
   </section>
@@ -747,7 +840,7 @@ footer {
     </div>
     <ul class="checklist">
       <li><strong>Objective:</strong> Articulate how AI/ML leadership can responsibly steer chemistry research and STEM education with clear vision and ethics.</li>
-      <li><strong>Process:</strong> Synthesized course prompts, case analyses, and reflections into a structured framework with mission, values, objectives, and feedback loops.</li>
+      <li><strong>Process:</strong> Synthesized learning prompts, case analyses, and reflections into a structured framework with mission, values, objectives, and feedback loops.</li>
       <li><strong>Audience fit:</strong> Tailored for mentors, school partners, and student researchers who need transparent guardrails and actionable guidance.</li>
     </ul>
     <h3>Mission</h3>
@@ -814,12 +907,12 @@ footer {
     </div>
     <ul class="checklist">
       <li><strong>Objective:</strong> Develop a clear visual framework that helps viewers compare supervised and unsupervised machine learning algorithms and understand where each method is commonly applied.</li>
-      <li><strong>Process:</strong> Reviewed course source material, selected 10 representative algorithms, grouped them by learning type, mapped each algorithm to relevant AI/ML domains, then translated the classification into a polished visual framework.</li>
-      <li><strong>Tools and technologies used:</strong> AI-assisted content synthesis, infographic design, machine learning taxonomy, course source links, and portfolio HTML integration.</li>
+      <li><strong>Process:</strong> Reviewed source material, selected 10 representative algorithms, grouped them by learning type, mapped each algorithm to relevant AI/ML domains, then translated the classification into a polished visual framework.</li>
+      <li><strong>Tools and technologies used:</strong> AI-assisted content synthesis, infographic design, machine learning taxonomy, source links, and portfolio HTML integration.</li>
     </ul>
     <h3>Artifact-Specific Value Proposition</h3>
     <p><strong>Unique value:</strong> This artifact demonstrates my ability to classify technical AI/ML concepts, communicate model differences visually, and connect algorithms to real-world applications in data science, computer vision, natural language processing, and generative AI.</p>
-    <p><strong>Relevance:</strong> It strengthens my portfolio by showing that I can move beyond definitions and organize machine learning knowledge in a way that is useful for instructors, employers, technical collaborators, and non-technical stakeholders.</p>
+    <p><strong>Relevance:</strong> It strengthens my portfolio by showing that I can move beyond definitions and organize machine learning knowledge in a way that is useful for academic reviewers, employers, technical collaborators, and non-technical stakeholders.</p>
   </div>
   <div class="image-pane">
     <img class="infographic-artifact" src="assets/infographic_ml_algorithms_TQ.png" alt="Infographic comparing machine learning algorithms"/>
@@ -835,15 +928,15 @@ footer {
 </div>
 <div class="card">
   <h3>Customization for Audience</h3>
-  <p><strong>Adaptations made:</strong> The infographic uses a two-column comparison layout, domain badges, concise explanations, and relationship cues so viewers can quickly distinguish supervised algorithms from unsupervised algorithms. The design also follows the course rubric by emphasizing visual hierarchy, alignment, classification accuracy, and professional polish.</p>
-  <p><strong>Relevance:</strong> These customizations make the artifact appropriate for AI/ML instructors, portfolio reviewers, and employers because it demonstrates both conceptual understanding and visual communication skill.</p>
+  <p><strong>Adaptations made:</strong> The infographic uses a two-column comparison layout, domain badges, concise explanations, and relationship cues so viewers can quickly distinguish supervised algorithms from unsupervised algorithms. The design also follows a structured evaluation rubric by emphasizing visual hierarchy, alignment, classification accuracy, and professional polish.</p>
+  <p><strong>Relevance:</strong> These customizations make the artifact appropriate for AI/ML reviewers, portfolio reviewers, and employers because it demonstrates both conceptual understanding and visual communication skill.</p>
 
   <h3>Reflection</h3>
   <p><strong>Significance:</strong> I chose this artifact because algorithm classification is foundational to machine learning practice. It demonstrates my ability to evaluate what different models do, where they are useful, and how they relate to broader AI/ML domains.</p>
   <p><strong>Lessons learned:</strong> Creating this framework reinforced that machine learning knowledge becomes more practical when algorithms are organized by purpose, data type, and application context. It also helped me practice translating technical content into a format that is easy to interpret without losing accuracy.</p>
 
   <h3>Feedback and Revisions</h3>
-  <p><strong>Feedback:</strong> No formal instructor feedback has been incorporated yet. I used the course rubric as a self-review guide to strengthen clarity, organization, alignment, classification accuracy, and visual appeal.</p>
+  <p><strong>Feedback:</strong> No formal reviewer feedback has been incorporated yet. I used the evaluation rubric as a self-review guide to strengthen clarity, organization, alignment, classification accuracy, and visual appeal.</p>
   <p><strong>Revisions:</strong> The portfolio was updated to add this artifact as number 6 in the hero alignment map, navigation menu, visual snapshot, artifact list, and detailed artifact section. The artifact description was also expanded to include objective, process, audience customization, reflection, and references.</p>
 
   <h3>References</h3>
@@ -851,6 +944,156 @@ footer {
     <li><a href="https://www.e-core.com/na-en/articles/differences-between-ai-ml-dl-gen-ai" target="_blank">e-Core. Differences between AI, ML, DL, and GenAI.</a></li>
     <li><a href="https://www.youtube.com/watch?v=lp_BTL_yADU" target="_blank">Course source video on Generative AI.</a></li>
   </ul>
+</div>
+</section>
+<section id="artifact7">
+<div class="card split-card">
+  <div class="text-pane">
+    <div class="eyebrow">Artifact 7 • Visual Presentation</div>
+    <h2>Neural Network Architecture: Components and Data Flow</h2>
+    <p class="lead">A slide presentation that explains modern neural network architecture through layers, processing units, tunable parameters, activations, loss functions, and optimization.</p>
+    <div class="inline-meta">
+      <span class="pill">Role: Solo author and presenter</span>
+      <span class="pill">Format: PowerPoint presentation</span>
+      <span class="pill">Focus: Deep learning foundations</span>
+    </div>
+    <ul class="checklist">
+      <li><strong>Objective:</strong> Make neural network structure easier to understand by connecting visual architecture diagrams to the underlying learning process.</li>
+      <li><strong>Process:</strong> Organized the presentation around a progression from input, hidden, and output layers to neurons, weights, biases, activation functions, loss functions, gradient descent, and interpretability.</li>
+      <li><strong>Audience fit:</strong> The artifact is presented as an embedded slide display so academic reviewers, hiring teams, and collaborators can review the work without leaving the portfolio.</li>
+    </ul>
+    <h3>Artifact Access</h3>
+    <p>Review the embedded presentation below. The original PowerPoint remains available as a source file for anyone who needs the editable deck: <a href="assets/Neural_Network_Components_Architecture_TQ.pptx" target="_blank">open PowerPoint source</a>.</p>
+  </div>
+  <div class="image-pane">
+    <img src="assets/neural-network-architecture-preview.svg" alt="Layered neural network architecture preview"/>
+    <span class="tag">Architecture + Flow</span>
+  </div>
+</div>
+<div class="card">
+  <h3>Embedded Slide Display</h3>
+  <div class="slide-embed" aria-label="Embedded neural network architecture slide presentation">
+    <div class="slide-strip">
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 01</span>
+          <h4>Neural Network Architecture</h4>
+          <p>Deep dive into the components and data flows of modern artificial intelligence.</p>
+        </div>
+        <p>By Timothy Quainoo</p>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 02</span>
+          <h4>The Three Pillars: Layers</h4>
+          <ul>
+            <li>Input layers pass raw features into the model.</li>
+            <li>Hidden layers transform patterns into richer representations.</li>
+            <li>Output layers produce predictions, probabilities, or values.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 03</span>
+          <h4>Neurons: Processing Units</h4>
+          <p>Artificial neurons aggregate weighted inputs, apply a non-linear activation, and pass the transformed signal forward.</p>
+        </div>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 04</span>
+          <h4>Weights &amp; Biases</h4>
+          <p>Weights control connection strength. Biases shift activation behavior so the model can fit patterns that do not pass through the origin.</p>
+        </div>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 05</span>
+          <h4>Visualizing Data Flow</h4>
+          <p>Feedforward inference processes information layer by layer, moving from edges and colors to textures, shapes, and final object-level outputs.</p>
+        </div>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 06</span>
+          <h4>Activation: Non-Linearity</h4>
+          <ul>
+            <li>Sigmoid supports probability-style outputs.</li>
+            <li>ReLU is fast and useful in hidden layers.</li>
+            <li>Softmax converts outputs into a probability distribution.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 07</span>
+          <h4>Loss Functions</h4>
+          <p>The loss function quantifies how far a prediction is from the ground truth, giving training a clear objective to minimize.</p>
+        </div>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 08</span>
+          <h4>Optimization: Learning</h4>
+          <p>Gradient descent adjusts weights in the direction that reduces error. Stochastic gradient descent is fast and noisy; Adam uses adaptive moment estimates.</p>
+        </div>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 09</span>
+          <h4>Visualizing Insight</h4>
+          <p>Architecture visualization turns abstract matrix operations into interpretable features, supports debugging, and helps communicate model behavior.</p>
+        </div>
+      </article>
+      <article class="embedded-slide">
+        <div>
+          <span class="slide-number">Slide 10</span>
+          <h4>Exercise Summary</h4>
+          <ul>
+            <li>Deep learning composes simple operations into complex abstractions.</li>
+            <li>Model power resides in the connections between units.</li>
+            <li>Training explores a high-dimensional optimization landscape.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="slide-note">Scroll horizontally to review the presentation inside the portfolio.</div>
+  </div>
+</div>
+<div class="card">
+  <h3>Presentation Overview</h3>
+  <p>The slide deck introduces neural networks as structured systems for knowledge representation. It explains the three main layer types, the artificial neuron, the role of weights and biases, feedforward data flow, activation functions, loss functions, gradient descent, and the value of visualizing model behavior.</p>
+  <div class="feature-tiles">
+    <div class="tile">
+      <h3>Architecture</h3>
+      <ul class="pill-muted">
+        <li>Input, hidden, and output layers define the model pathway.</li>
+        <li>Neurons aggregate weighted inputs and pass transformed signals forward.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <h3>Training</h3>
+      <ul class="pill-muted">
+        <li>Loss functions measure prediction error against the target.</li>
+        <li>Gradient descent and Adam optimization guide parameter updates.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <h3>Interpretability</h3>
+      <ul class="pill-muted">
+        <li>Visualization helps explain hierarchical feature learning.</li>
+        <li>Architecture diagrams support communication with non-technical stakeholders.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <h3>Portfolio Reflection</h3>
+  <div class="assignment-text-area">
+    <p><strong>Learning experience and process:</strong> Creating this artifact strengthened understanding of neural networks as connected systems rather than isolated definitions. The process required breaking a complex topic into a clear sequence: data enters through input features, hidden layers transform patterns, output layers produce predictions, and training adjusts weights and biases through loss-driven optimization. Building the presentation also reinforced the importance of visual communication in AI/ML learning. Diagrams, concise labels, and staged explanations made abstract concepts such as activation functions and gradient descent easier to explain to academic, peer, or non-technical audiences.</p>
+    <p><strong>Revision focus:</strong> The portfolio integration added a dedicated artifact section, embedded presentation display, visual preview, artifact metadata, and this reflection area so the work follows the same template pattern as the other portfolio artifacts while still reading as a professional portfolio piece.</p>
+  </div>
 </div>
 </section>
 
