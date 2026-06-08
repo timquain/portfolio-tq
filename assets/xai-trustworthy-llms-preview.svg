@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Explainable AI and trustworthy LLMs visual preview</title>
+  <desc id="desc">A professional slide-style diagram showing an AI model connected to transparency, validation, fairness, and governance signals.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset=".55" stop-color="#f2eadb"/>
+      <stop offset="1" stop-color="#dceae5"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#26352b"/>
+      <stop offset="1" stop-color="#2f7f74"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#2f261d" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="960" height="720" rx="28" fill="url(#bg)"/>
+  <path d="M0 88h960M0 176h960M0 264h960M0 352h960M0 440h960M0 528h960M0 616h960M120 0v720M240 0v720M360 0v720M480 0v720M600 0v720M720 0v720M840 0v720" stroke="#20241f" stroke-opacity=".045" stroke-width="2"/>
+  <rect x="84" y="72" width="792" height="576" rx="24" fill="#fffcf4" stroke="#d9d4c8" filter="url(#shadow)"/>
+  <rect x="122" y="112" width="716" height="118" rx="18" fill="url(#panel)"/>
+  <text x="154" y="160" fill="#fffaf0" font-family="Georgia, serif" font-size="34" font-weight="700">Explainable AI</text>
+  <text x="154" y="196" fill="#fffaf0" fill-opacity=".86" font-family="Source Sans Pro, Segoe UI, sans-serif" font-size="22">Trustworthy Large Language Models</text>
+  <g transform="translate(360 286)">
+    <rect x="0" y="0" width="240" height="150" rx="22" fill="#26352b"/>
+    <circle cx="64" cy="60" r="24" fill="#b95f3d"/>
+    <circle cx="120" cy="52" r="20" fill="#fffaf0" fill-opacity=".9"/>
+    <circle cx="176" cy="82" r="24" fill="#2f7f74"/>
+    <path d="M86 60h14M140 58l16 12M82 76l78 12" stroke="#fffaf0" stroke-width="7" stroke-linecap="round" opacity=".72"/>
+    <text x="120" y="126" text-anchor="middle" fill="#fffaf0" font-family="Source Sans Pro, Segoe UI, sans-serif" font-size="20" font-weight="700">LLM Output</text>
+  </g>
+  <g fill="#fffaf0" stroke="#d9d4c8" stroke-width="2">
+    <rect x="130" y="284" width="178" height="74" rx="14"/>
+    <rect x="652" y="284" width="178" height="74" rx="14"/>
+    <rect x="130" y="424" width="178" height="74" rx="14"/>
+    <rect x="652" y="424" width="178" height="74" rx="14"/>
+  </g>
+  <g font-family="Source Sans Pro, Segoe UI, sans-serif" fill="#20241f">
+    <text x="219" y="315" text-anchor="middle" font-size="18" font-weight="700">Transparency</text>
+    <text x="219" y="341" text-anchor="middle" font-size="15" fill="#6f766f">model cards</text>
+    <text x="741" y="315" text-anchor="middle" font-size="18" font-weight="700">Validation</text>
+    <text x="741" y="341" text-anchor="middle" font-size="15" fill="#6f766f">metrics + tests</text>
+    <text x="219" y="455" text-anchor="middle" font-size="18" font-weight="700">Fairness</text>
+    <text x="219" y="481" text-anchor="middle" font-size="15" fill="#6f766f">bias review</text>
+    <text x="741" y="455" text-anchor="middle" font-size="18" font-weight="700">Governance</text>
+    <text x="741" y="481" text-anchor="middle" font-size="15" fill="#6f766f">risk control</text>
+  </g>
+  <g stroke="#b95f3d" stroke-width="4" stroke-linecap="round" opacity=".72">
+    <path d="M310 320h44"/>
+    <path d="M606 320h44"/>
+    <path d="M310 460c44 0 48-52 68-58"/>
+    <path d="M650 460c-44 0-48-52-68-58"/>
+  </g>
+  <g transform="translate(162 560)">
+    <rect width="636" height="44" rx="22" fill="#ebe4d6" stroke="#d9d4c8"/>
+    <circle cx="38" cy="22" r="10" fill="#3d8d5a"/>
+    <circle cx="212" cy="22" r="10" fill="#b95f3d"/>
+    <circle cx="386" cy="22" r="10" fill="#2f7f74"/>
+    <text x="60" y="28" fill="#20241f" font-family="Source Sans Pro, Segoe UI, sans-serif" font-size="15" font-weight="700">calibration</text>
+    <text x="234" y="28" fill="#20241f" font-family="Source Sans Pro, Segoe UI, sans-serif" font-size="15" font-weight="700">red teaming</text>
+    <text x="408" y="28" fill="#20241f" font-family="Source Sans Pro, Segoe UI, sans-serif" font-size="15" font-weight="700">human feedback</text>
+  </g>
+</svg>
