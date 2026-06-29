@@ -647,14 +647,14 @@ section[id] {
       <span class="chip">Responsible AI</span>
     </div>
     <div class="stats">
-      <div class="stat"><span class="value">9</span><span class="label">Portfolio artifacts mapped to learning outcomes</span></div>
+      <div class="stat"><span class="value">10</span><span class="label">Portfolio artifacts mapped to learning outcomes</span></div>
       <div class="stat"><span class="value">3</span><span class="label">Disciplines: AI/ML, UX, Computational Chemistry</span></div>
       <div class="stat"><span class="value">1</span><span class="label">Live assistant prototype with test coverage</span></div>
     </div>
   </div>
   <div class="hero-panel">
-    <h2>Nine artifacts, one focused story.</h2>
-    <p>Evidence spans a live AI assistant prototype, scientific machine learning translation, leadership reflection, algorithm communication, neural network architecture, LLM training economics, and explainable AI.</p>
+    <h2>Ten artifacts, one focused story.</h2>
+    <p>Evidence spans a live AI assistant prototype, scientific machine learning translation, leadership reflection, algorithm communication, neural network architecture, LLM training economics, explainable AI, and deployment-aware model selection.</p>
     <div class="hero-actions">
       <a href="#artifact1">Start with the prototype</a>
       <a href="#snapshot">View snapshots</a>
@@ -675,6 +675,7 @@ section[id] {
 <a href="#artifact7">Network Architecture</a>
 <a href="#artifact8">GenAI LLM Training</a>
 <a href="#artifact9">Explainable AI</a>
+<a href="#artifact10">Model Decision Matrix</a>
 </div>
 </nav>
 <main class="wrap">
@@ -722,6 +723,10 @@ section[id] {
     <figure>
       <img src="assets/xai-trustworthy-llms-preview.svg" alt="Explainable AI and trustworthy large language models preview"/>
       <figcaption><strong>Explainable AI</strong>Slide-style explanation of transparency, validation, bias testing, model documentation, and trustworthy LLM governance.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/pretrained-model-decision-matrix-preview.svg" alt="Pre-trained AI model decision matrix preview"/>
+      <figcaption><strong>Model Decision Matrix</strong>Cross-domain selection guide balancing model size, accuracy, speed, explainability, and deployment feasibility.</figcaption>
     </figure>
   </div>
 </section>
@@ -1310,6 +1315,97 @@ section[id] {
     <li>OpenAI. (2024). <em>GPT-4o System Card.</em></li>
     <li>Professional Portfolio Artifact Template. (2026). Course source document.</li>
     <li>Course Outline. (2026). Applied machine learning course source document.</li>
+  </ul>
+</div>
+</section>
+<section id="artifact10">
+<div class="card split-card">
+  <div class="text-pane">
+    <div class="eyebrow">Artifact 10 • Model Selection</div>
+    <h2>Decision Matrix for Selecting Pre-Trained AI Models</h2>
+    <p class="lead">A decision-support artifact for choosing pre-trained models across NLP, generative AI, computer vision, and tabular data without relying on benchmark scores alone.</p>
+    <div class="inline-meta">
+      <span class="pill">Role: Solo author and analyst</span>
+      <span class="pill">Format: Word document + visual matrix</span>
+      <span class="pill">Focus: Size · Accuracy · Speed · Explainability</span>
+    </div>
+    <ul class="checklist">
+      <li><strong>Objective:</strong> Compare representative pre-trained and foundation-model options so model choices account for deployment cost, latency, hardware requirements, accuracy, and interpretability.</li>
+      <li><strong>Process:</strong> Reviewed model cards, benchmark documentation, and peer-reviewed sources, then translated parameter counts, benchmark scores, compute needs, and explainability methods into a practical matrix.</li>
+      <li><strong>Audience fit:</strong> The artifact is written for portfolio reviewers, technical collaborators, and hiring managers who need to see how model selection decisions are justified in applied AI work.</li>
+    </ul>
+    <h3>Artifact Access</h3>
+    <p>Review the source document here: <a href="assets/Pretrained_Model_Decision_Matrix_Portfolio_Artifact.docx" target="_blank">open Word document</a>.</p>
+  </div>
+  <div class="image-pane">
+    <img src="assets/pretrained-model-decision-matrix-preview.svg" alt="Decision matrix preview for selecting pre-trained AI models"/>
+    <span class="tag">Selection Trade-offs</span>
+  </div>
+</div>
+<div class="card">
+  <h3>Decision Criteria</h3>
+  <div class="feature-tiles">
+    <div class="tile">
+      <h3>Model Size</h3>
+      <p class="pill-muted">Parameters, approximate weight memory, and deployment footprint indicate whether a model is feasible for the target environment.</p>
+    </div>
+    <div class="tile">
+      <h3>Accuracy</h3>
+      <p class="pill-muted">Domain-specific benchmarks such as MMLU, ImageNet top-1, ROC AUC, RMSE, or task accuracy help compare predictive utility.</p>
+    </div>
+    <div class="tile">
+      <h3>Speed</h3>
+      <p class="pill-muted">Latency, throughput, GFLOPS, and fit-and-predict time shape real-time performance, cost, and user experience.</p>
+    </div>
+    <div class="tile">
+      <h3>Explainability</h3>
+      <p class="pill-muted">SHAP, feature importance, Grad-CAM, attention analysis, and local explanations help stakeholders understand model behavior.</p>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <h3>Recommended Models by Scenario</h3>
+  <div class="feature-tiles">
+    <div class="tile">
+      <h3>Fast Text Tasks</h3>
+      <p><strong>DistilBERT</strong> is the practical choice for focused classification, sentiment analysis, named entity recognition, and question answering when latency and memory matter.</p>
+    </div>
+    <div class="tile">
+      <h3>Practical GenAI</h3>
+      <p><strong>Llama 3.1 8B</strong> fits lower-cost chatbots, summarization, code support, and local or cloud prototypes where deployment feasibility matters.</p>
+    </div>
+    <div class="tile">
+      <h3>Balanced Vision</h3>
+      <p><strong>ResNet-50</strong> is a strong transfer-learning baseline because it pairs practical accuracy, mature tooling, and accessible visual explanation methods.</p>
+    </div>
+    <div class="tile">
+      <h3>Tabular Production</h3>
+      <p><strong>XGBoost or CatBoost</strong> remain essential baselines for structured prediction because they combine performance, scalability, and stronger explainability support.</p>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <h3>Portfolio Value</h3>
+  <p><strong>Unique value:</strong> This artifact showcases applied AI/ML judgment rather than isolated model knowledge. It demonstrates competency in algorithm selection, transfer learning awareness, performance validation, explainability analysis, and deployment-oriented decision-making.</p>
+  <p><strong>Relevance:</strong> The artifact supports AI engineering, data analytics, computational science, and model development roles because those roles require choosing models that are accurate, efficient, explainable, and feasible to deploy.</p>
+
+  <h3>Reflection</h3>
+  <p><strong>Significance:</strong> This artifact was chosen because model selection is a central skill in applied machine learning. The work reinforces that the largest or newest model is not automatically the best model.</p>
+  <p><strong>Lessons learned:</strong> Responsible model selection depends on the use case. Performance, cost, latency, hardware, energy use, and explainability have to be evaluated together before deployment.</p>
+
+  <h3>Feedback and Revisions</h3>
+  <p><strong>Feedback:</strong> No formal instructor feedback has been incorporated yet. Recommended future revisions include adding hardware-specific latency tests and expanding the matrix with RoBERTa, EfficientNet, ConvNeXt, LightGBM, or newer tabular foundation models.</p>
+  <p><strong>Revisions:</strong> The portfolio was updated to add this artifact as number 10 in the hero count, navigation menu, visual snapshot, source-document access, and detailed portfolio sequence.</p>
+
+  <h3>References</h3>
+  <ul class="reference-list">
+    <li>Chen, T., &amp; Guestrin, C. (2016). XGBoost: A scalable tree boosting system.</li>
+    <li>Hollmann, N., Muller, S., Purucker, L., Krishnakumar, A., Korfer, M., Hoo, S. B., Schirrmeister, R. T., &amp; Hutter, F. (2025). Accurate predictions on small data with a tabular foundation model.</li>
+    <li>Meta. (2024). Llama 3.1 model card.</li>
+    <li>Prior Labs. (2025). TabPFN v2: A tabular foundation model.</li>
+    <li>Prokhorenkova, L., Gusev, G., Vorobev, A., Dorogush, A. V., &amp; Gulin, A. (2018). CatBoost: Unbiased boosting with categorical features.</li>
+    <li>PyTorch. (n.d.). Models and pre-trained weights.</li>
+    <li>Sanh, V., Debut, L., Chaumond, J., &amp; Wolf, T. (2019). DistilBERT, a distilled version of BERT: Smaller, faster, cheaper and lighter.</li>
   </ul>
 </div>
 </section>
